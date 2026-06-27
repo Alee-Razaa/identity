@@ -1,0 +1,354 @@
+Anthropic logo
+Claude 101
+
+Anthropic
+
+Issued May 2026
+
+Credential ID hz2p5f4eikah
+
+Show credential
+Skills: Generative AI, Multimodal Prompting, +3 skills
+
+Thumbnail for Claude 101
+Claude 101
+
+Earned the Claude 101 certification from Anthropic, gaining a foundational understanding of Claude's architecture, capabilities, and core use cases. This training focused on leveraging advanced AI models to optimize workflows, improve task efficiency, and integrate intelligent automation into project management. Delighted to add these cutting-edge AI competencies to my professional toolkit.
+
+Anthropic logo
+Al Fluency Framework & Foundations
+
+Anthropic
+
+Issued May 2026
+
+Credential ID hdvmf477erdm
+
+Show credential
+Skills: Generative AI, LLM Integration, +3 skills
+
+Thumbnail for AI Fluency: Framework & Foundation
+AI Fluency: Framework & Foundation
+
+Completed Anthropic's AI Fluency: Framework & Foundations certificate, mastering the core principles of generative AI infrastructure, structural prompt design, and enterprise LLM deployment. This certification strengthens my technical toolkit in full-stack AI development, workflow automation, and building reliable, scalable AI integrations using industry-standard framework methodologies.
+
+Simplilearn logo
+Prompt Engineering
+
+Simplilearn
+
+Issued Dec 2025
+
+Credential ID 9578731
+
+Show credential
+Skills: Multimodal Prompting, Prompt Engineering, +3 skills
+
+Thumbnail for Prompt Engineering 
+Prompt Engineering 
+
+Completed Simplilearn's Prompt Engineering with ChatGPT program, mastering advanced techniques for interacting with large language models (LLMs). This training focused on structural prompt design, context conditioning, and zero-shot/few-shot learning to build efficient, scalable, and reliable AI-driven solutions. Gained practical experience leveraging generative AI tools to optimize workflow automation, enhance conversational AI agents, and streamline full-stack AI development.
+
+Google Cloud Skills Boost logo
+Analyze Speech and Language with Google APIs Skill Badge
+
+Google Cloud Skills Boost
+
+Issued Feb 2025
+
+Show credential
+Skills: Machine Learning, Artificial Intelligence (AI)
+
+Google Cloud Skills Boost logo
+Analyze Sentiment with Natural Language API Skill Badge
+
+Google Cloud Skills Boost
+
+Issued Feb 2025
+
+Show credential
+Skills: Generative AI, Machine Learning, +1 skill
+
+LinkedIn logo
+Introduction to Career Skills in Data Analytics
+
+LinkedIn
+
+Issued Sep 2024
+
+Show credential
+Skills: Tech Career Skills, Data Analytics, +2 skills
+
+LinkedIn logo
+Generative AI
+
+LinkedIn
+
+Issued Sep 2024
+
+Show credential
+Skills: Generative AI, Generative AI Tools, +3 skills
+
+Thumbnail for Generative AI
+Generative AI
+
+Completed the Generative AI certification on LinkedIn Learning, establishing a solid foundation in the core principles of artificial intelligence, machine learning models, and generative technology. This training serves as a strong baseline for building, integrating, and deploying scalable full-stack AI solutions and large language models (LLMs).
+
+Coursera logo
+Algorithms, Part I
+
+Coursera
+
+Issued Aug 2024
+
+Skills: Algorithms, Mathematical Analysis, +3 skills
+
+Google Cloud Skills Boost logo
+Vertex Search and Embeddings
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 10005131
+
+Show credential
+Skills: Word Embeddings, Retrieval-Augmented Generation (RAG), +1 skill
+
+Thumbnail for Vertex Search and Embeddings
+Vertex Search and Embeddings
+
+Vertex Search Embeddings certificate, demonstrating proficiency in using Vertex AI for vector search applications. This accomplishment includes mastering text embeddings, building efficient vector search indices, and implementing retrieval-augmented generation (RAG) systems. The hands-on lab experience ensured practical skills in creating scalable, high-performance search solutions, significantly enhancing the ability to develop advanced AI-powered applications.
+
+Google Cloud Skills Boost logo
+Introduction to Vertex AI Studio
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 9972629
+
+Show credential
+Skills: Chatbot Design, Chatbot Responses, +4 skills
+
+Thumbnail for Introduction to Vertex AI Studio
+Introduction to Vertex AI Studio
+
+Introduction to Vertex AI: Completed an advanced course with hands-on labs on creating and training models tailored to specific business needs. Gained expertise in using Vertex AI for developing and deploying machine learning solutions aligned with business logic and objectives.
+
+Google Cloud Skills Boost logo
+Create Image Captioning Model
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 9946746
+
+Show credential
+Skills: Chatbot Design, Generative AI, +4 skills
+
+Thumbnail for Create Image Captioning Models.png
+Create Image Captioning Models.png
+
+Image Captioning: Practical experience in developing an image captioning model using a dataset of 2500 images. Utilized TensorFlow and Keras components such as Reshape, Add, Concatenate, GRU, Embedding, and Attention layers. Combined visual and textual data to generate descriptive captions, demonstrating advanced skills in computer vision and natural language processing.
+
+Google Cloud Skills Boost logo
+Transformer Models and BERT Model
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 9926215
+
+Show credential
+Skills: Chatbot Design, Chatbot Responses, +5 skills
+
+Thumbnail for Transformer Models and BERT Model
+Transformer Models and BERT Model
+
+Certified in Transformer and BERT Models: Acquired in-depth knowledge of Transformer architectures and BERT models. Proficient in implementing advanced NLP techniques for tasks such as language understanding, text generation, and context-aware predictions, enhancing the performance and accuracy of machine learning models.
+
+Google Cloud Skills Boost logo
+Encoder-Decoder Architectures
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 9875385
+
+Show credential
+Skills: Chatbot Design, Chatbot Responses, +3 skills
+
+Thumbnail for How Encoder-Decoder Architectures Work
+How Encoder-Decoder Architectures Work
+
+Certified in Encoder-Decoder Architectures: Proficient in implementing and utilizing encoder-decoder architectures for complex sequence-to-sequence tasks. Demonstrated ability to enhance machine learning models through advanced techniques in natural language processing and image-to-text applications.
+
+Google Cloud Skills Boost logo
+Attention Mechanism
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 9760276
+
+Show credential
+Skills: Chatbot Design, Recommender Systems, +3 skills
+
+Thumbnail for Attention Mechanism
+Attention Mechanism
+
+Certified in Attention Mechanism: Mastered advanced attention mechanisms in deep learning, including Additive and Multi-Head Attention. Demonstrated expertise in enhancing model performance through sophisticated attention layers for improved focus and accuracy in machine learning tasks.
+
+Google Cloud Skills Boost logo
+Introduction to Image Generation 
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 9760163
+
+Show credential
+Skills: Chatbot Design, Generative AI, +5 skills
+
+Thumbnail for Introduction to Image generation
+Introduction to Image generation
+
+Certified in Introduction to Image Generation: Demonstrated expertise in leveraging the InceptionResNetV2 architecture and TensorFlow for advanced image feature extraction and multimodal data integration. Proven ability in implementing state-of-the-art deep learning techniques for robust machine learning models.
+
+Google Cloud Skills Boost logo
+AI principles with Google Cloud 
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 9727572
+
+Show credential
+Skills: Chatbot Design, Chatbot Responses, +5 skills
+
+Thumbnail for Applying principles with Google Cloud
+Applying principles with Google Cloud
+
+I have earned the "Applying AI Principles with Google Cloud" badge, demonstrating my proficiency in integrating AI principles into practical solutions. This achievement underscores my capability to apply advanced AI techniques using Google Cloud's robust infrastructure, enhancing my ability to drive innovation and efficiency in AI-driven projects.
+
+Google Cloud Skills Boost logo
+Prompt design in Vertex AI
+
+Google Cloud Skills Boost
+
+Issued Jul 2024
+
+Credential ID 9688900
+
+Show credential
+Skills: Chatbot Design, Generative AI, +6 skills
+
+Thumbnail for Prompt design in vertex AI.JPG
+Prompt design in vertex AI.JPG
+
+I have successfully completed the Prompt Design course from Google Cloud, achieving a significant milestone in mastering advanced prompt engineering techniques. This certification highlights my expertise in designing effective prompts to optimize AI and machine learning model performance, contributing to innovative solutions in the tech industry.
+
+Google Cloud Skills Boost logo
+Introduction to responsible AI
+
+Google Cloud Skills Boost
+
+Issued Jun 2024
+
+Credential ID 9622064
+
+Show credential
+Skills: Chatbot Design, Chatbot Responses, +4 skills
+
+Thumbnail for Introduction to Responsible AI
+Introduction to Responsible AI
+
+This certification covers key principles and practices to ensure AI systems are fair, transparent, and accountable. It encompasses understanding the societal impacts of AI, mitigating biases, ensuring privacy and security, and adhering to legal and regulatory requirements.
+
+Google Cloud Skills Boost logo
+Introduction to Large Language Models (LLMs) 
+
+Google Cloud Skills Boost
+
+Issued Jun 2024
+
+Credential ID 9606076
+
+Show credential
+Skills: Generative AI, LLM Integration
+
+Thumbnail for Introduction Large Language Models
+Introduction Large Language Models
+
+I am proud to share my certificate of completion for the "Introduction to Large Language Models (LLMs)" course, a testament to my dedication to advancing my skills and knowledge in AI and machine learning.
+
+Google Cloud Skills Boost logo
+Google Cloud Certified Introduction to Generative AI
+
+Google Cloud Skills Boost
+
+Issued Jun 2024
+
+Credential ID 9605722
+
+Show credential
+Skills: Chatbot Design, Chatbot Responses, +4 skills
+
+Thumbnail for Introduction to Generative AI.JPG
+Introduction to Generative AI.JPG
+
+This course gave me a comprehensive understanding of generative AI, including its key concepts, techniques, and applications.
+
+
+
+https://verify.skilljar.com/c/hz2p5f4eikah (401)
+https://verify.skilljar.com/c/hdvmf477erdm 
+https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI1MDUxIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTU3ODczMV85ODQ1NzY0MTc2NTY1Njc3NDI4NC5wbmciLCJ1c2VybmFtZSI6IkFsaSBSYXphIE1lbW9uIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F8058%2FPrompt-Engineering-with-ChatGPT%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1591378775738140693&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVT03OMgtzNk72NUiyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAINOqMpBAAAA
+
+https://www.credly.com/badges/2a16fe93-5f43-4964-9e22-5cff6bb65c45/linked_in_profile (Analyze Speech and Language with Google APIs Skill Badge
+
+https://www.credly.com/badges/eebc40d6-51f0-4f0a-99e9-aa42b0a4f142/linked_in_profile  (Analyze Sentiment with Natural Language API Skill Badge)
+
+https://www.linkedin.com/learning/certificates/021ad118522b25bddb3e019c65a6ac183ca8809782cb5f86646a85b380650232?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BEhwANH71Q6Cn8FvRS%2FlZ5w%3D%3D
+
+(Introduction to Career Skills in Data Analytics)
+
+
+https://www.linkedin.com/learning/certificates/5dd162f9cfde50f74b210201b73c580417d5c477abe0860d6ecc5b26c031b36e?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BEhwANH71Q6Cn8FvRS%2FlZ5w%3D%3D
+
+What Is Generative AI?
+
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/10005131?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (vector Search and Embeddings)
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9972629?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Intro to Vertex AI studio)
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9946746?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Create Image Captioning Models)
+
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9926215?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Transformer Models and BERT Model)
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9875385?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Encoder-Decoder Architecture)
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9760276?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Attention Mechanism)
+
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9727572?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Responsible AI: Applying AI Principles with Google Cloud)
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9688900?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Prompt Design in Vertex AI)
+
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9622064?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Introduction to Responsible AI)
+
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9606076?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Introduction to Large Language Models)
+
+https://www.skills.google/public_profiles/dc535861-0f72-4d39-84d5-1899f5bdaeb9/badges/9605722?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share (Introduction to Generative AI)

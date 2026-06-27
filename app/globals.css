@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Allow scrolling when portfolio is shown */
+body.portfolio-shown {
+  overflow-y: auto;
+}
+
+body.portfolio-hidden {
+  overflow-y: hidden;
+}
+
+/* Smooth transitions */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* Text Selection */
+::selection {
+  background-color: #7c3aed;
+  color: #e2e8f0;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Portfolio reveal animation */
+@keyframes slideUpReveal {
+  from {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.animate-slide-up-reveal {
+  animation: slideUpReveal 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-hero-fade-out {
+  animation: heroFadeOut 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
