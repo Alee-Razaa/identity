@@ -1,0 +1,810 @@
+{
+  "meta": {
+    "name": "Ali Raza Memon",
+    "title": "Full-Stack AI Engineer | AI Solutions Architect | DL/CV Engineer",
+    "profileVersion": "3.0-Complete",
+    "lastUpdated": "June 2026",
+    "description": "Full-stack AI engineer specializing in deep learning, computer vision, enterprise applications, and intelligent automation. 25 completed projects with 100% client satisfaction across global freelance platforms.",
+    "availability": "Remote, Onsite, Hybrid, Freelance"
+  },
+
+  "identity": {
+    "name": "Ali Raza Memon",
+    "alternateNames": ["Ali Raza", "Yasir Ali"],
+    "title": "Full-Stack AI Engineer | AI Solutions Architect | DL/CV Engineer",
+    "locations": {
+      "primary": "Sukkur, Sindh, Pakistan",
+      "secondary": "Karachi, Pakistan",
+      "tertiary": "Lahore"
+    },
+    "contact": {
+      "email": "alirazamemonofficial@gmail.com",
+      "phone": "+923042424358"
+    },
+    "digitalPresence": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/realalirazamemon/",
+        "label": "LinkedIn Profile"
+      },
+      "github": {
+        "url": "http://github.com/alee-razaa",
+        "label": "GitHub Repository"
+      },
+      "freelanceProfile": {
+        "url": "https://www.peopleperhour.com/freelancer/technology-programming/yasir_ali-mahar-full-stack-web-mobile-app-zynaxmya",
+        "platform": "PeoplePerHour",
+        "status": "Active - 25+ Completed Projects",
+        "rating": "5.0/5 Stars"
+      }
+    }
+  },
+
+  "professionalNarrative": {
+    "headline": "Passionate AI Developer with Proven Deep Expertise in Problem-Solving, Enterprise Solutions, and Machine Learning",
+    "summary": "I'm an AI engineer who builds systems that work in production. My foundation spans deep learning, computer vision, and full-stack development—but more importantly, I translate complex AI concepts into real business solutions. I've led teams across 25 successful projects, worked with clients from London to Dubai, and consistently delivered systems that exceed expectations. The work I do combines rigorous technical architecture with genuine understanding of what clients actually need.",
+    "perspective": "What I've learned: AI is only valuable when it solves real problems and runs reliably in production. Theory matters, but execution matters more. I'm equally comfortable designing sophisticated ML pipelines, architecting enterprise systems, or jumping into a client's messy codebase to fix what's broken. That versatility comes from building things end-to-end—not delegating away the hard parts.",
+    "commitment": "Certified Claude developer (Claude 101 Certification from Anthropic, AI Fluency Framework & Foundations). I practice collaborative development using AI agents for accelerated, high-quality solutions without sacrificing craftsmanship. My focus remains on core architecture, problem-solving methodology, and design patterns—supported by practical implementation and iterative refinement. Every project receives the same treatment: thoughtful engineering, thorough testing, transparent communication, and long-term support."
+  },
+
+  "education": {
+    "degree": "Bachelor of Science in Computer Science - Artificial Intelligence (BSCS AI)",
+    "institution": "Sukkur IBA University",
+    "location": "Sukkur, Pakistan",
+    "completionDate": "May 2026",
+    "completionYear": "2022-2026",
+    "status": "Completed",
+    "academicApproach": "Theoretical foundation combined with applied project work. Rather than pure academic exercises, emphasis on building functional systems that demonstrate mastery of concepts.",
+    "coreCoursework": {
+      "machineLearning": {
+        "course": "Machine Learning (Python-Focused)",
+        "detail": "Supervised learning algorithms, ensemble methods, decision trees, regression models. Heavy Python emphasis with Scikit-learn, practical dataset work.",
+        "practicalApplication": "Built market analysis systems, anomaly detection pipelines"
+      },
+      "deepLearning": {
+        "course": "Deep Learning (Neural Networks)",
+        "detail": "Artificial neural networks, convolutional neural networks (CNN), recurrent networks, backpropagation, optimization techniques. Training on GPU clusters.",
+        "practicalApplication": "YOLOv8 threat detection system, multimodal AI chatbot, image recognition models"
+      },
+      "computerVision": {
+        "course": "Computer Vision (Traditional & Latest Techniques)",
+        "detail": "Image processing fundamentals with OpenCV, modern architectures (ResNet, ImageNet), object detection, real-time inference optimization.",
+        "practicalApplication": "SmartLens surveillance system detecting fire, looting, suspicious behavior with <50ms latency"
+      },
+      "artificialIntelligence": {
+        "course": "Artificial Intelligence (RAG, Explainable AI, Model Architecture)",
+        "detail": "Retrieval-augmented generation systems, building transparent AI models, design patterns for scalable AI architectures, agent-based systems.",
+        "practicalApplication": "Multimodal chatbots with concurrent LLM comparison, intelligent automation agents"
+      },
+      "dataStructures": {
+        "course": "Data Structures & Analysis of Algorithms",
+        "detail": "Foundational computer science: complexity analysis, algorithm optimization, memory efficiency, scalable data organization.",
+        "relevance": "Core to designing systems that scale beyond prototype phase"
+      },
+      "softwareEngineering": {
+        "course": "Software Engineering (Agile, Sprint-Based Development, Testing, Architecture Patterns)",
+        "detail": "Layered architecture, MVC patterns, test-driven development, continuous integration, incremental development methodology.",
+        "practicalApplication": "Enterprise applications, large-scale team projects, production deployment pipelines"
+      },
+      "mathematics": {
+        "linearAlgebra": "Vectors, matrices, derivatives, linear transformations—mathematical foundation for ML",
+        "probabilityStatistics": "Probability distributions, statistical inference, gradient descent, Bayesian methods"
+      },
+      "mobileAI": {
+        "course": "Mobile Application Development with AI (Kotlin/Android)",
+        "detail": "Android development with Kotlin, coroutines for async operations, notification manager for real-time alerts, sensor integration, on-device AI inference.",
+        "practicalApplication": "Fire detection mobile app with instant authority notifications"
+      },
+      "enterpriseDevWithAI": {
+        "course": "Enterprise Application Development with AI (MERN Stack, Git)",
+        "detail": "Full-stack development: MongoDB, Express, React, Node.js. Version control, collaborative development, production-grade systems.",
+        "practicalApplication": "Restaurant booking platform, e-commerce systems, CRM integrations, market intelligence platforms"
+      }
+    }
+  },
+
+  "coreCapabilities": {
+    "strategicStrengths": [
+      {
+        "area": "Team Leadership & Technical Direction",
+        "detail": "Led freelance team of 4 engineers across 25 completed projects. Managed product development from scoping through deployment. Maintained 100% client satisfaction and 5-star ratings on every project. Direct stakeholder management, meeting facilitation, technical guidance, code review, architecture decisions.",
+        "evidence": "25 projects delivered on schedule, zero escalations, repeated clients requesting to work with team again"
+      },
+      {
+        "area": "Enterprise Application Architecture & Deployment",
+        "detail": "Designed and deployed 4 enterprise applications for European small business clients. These systems run core operations: inventory management, order processing, client management, analytics. Built with scalability and reliability in mind from initial architecture.",
+        "evidence": "Oxford Sports e-commerce platform (5000+ product support, <10 second bulk upload), Multiple CRM and operational systems in production"
+      },
+      {
+        "area": "Content & Workflow Automation",
+        "detail": "Specialized in eliminating manual work through intelligent automation. Built custom Make.com and Zapier workflows, automated content posting across WordPress sites and social platforms, created Excel data-parsing systems for bulk operations. Replaced hours of manual labor with 10-second automation.",
+        "evidence": "5000+ product e-commerce upload completed in 1 day vs 3+ months manually; Multi-platform content posting fully automated"
+      },
+      {
+        "area": "E-Commerce Wholesale Systems",
+        "detail": "Solved complex e-commerce problems: autonomous inventory management, rule-based SKU tracking, smart order processing, bulk product upload with intelligent chunking and caching. Can handle thousands of concurrent operations, rule engine for dynamic pricing/availability.",
+        "evidence": "Oxford Sports platform, 5000+ SKU management, sub-10-second bulk operations"
+      },
+      {
+        "area": "Cloud Infrastructure & Serverless Architecture",
+        "detail": "Expert-level AWS deployment: Lambda for event-driven automation, RDS for relational data, S3 for file storage, SNS/SQS for messaging. Design systems that scale elastically without managing servers, optimize costs through serverless patterns.",
+        "evidence": "Real estate market intelligence pipelines, real-time notification systems, automated market analysis"
+      },
+      {
+        "area": "Client Communication & Technical Leadership",
+        "detail": "Direct client management without intermediaries. Clear technical explanations for non-technical stakeholders. Transparent about timelines, budgets, constraints. Proactive problem-solving. Long-term relationship focus rather than one-off transactions.",
+        "evidence": "Multiple repeat clients, clients requesting extended work, testimonials emphasizing reliability and communication"
+      }
+    ]
+  },
+
+  "technicalProficiencies": {
+    "aiAndMachineLearning": {
+      "coreSpecializations": [
+        {
+          "area": "Deep Learning & Neural Networks",
+          "frameworks": ["PyTorch", "TensorFlow", "Keras"],
+          "architectures": ["ANN (Artificial Neural Networks)", "CNN (Convolutional Neural Networks)", "ResNet", "ImageNet-trained models", "LSTM/RNN for sequences"],
+          "expertise": "Designing, training, optimizing, and deploying neural networks to production. Understanding of backpropagation, gradient descent, loss functions, regularization techniques.",
+          "productionExperience": "22 deep learning systems deployed to production"
+        },
+        {
+          "area": "Computer Vision (Traditional & Modern)",
+          "traditionalMethods": ["OpenCV", "Image filtering", "Feature detection", "Edge detection"],
+          "modernTechniques": ["YOLOv8 (real-time object detection)", "CNN-based image classification", "Instance segmentation"],
+          "realWorldApplication": "SmartLens system: Real-time detection of fire, looting, fighting in surveillance video with <50ms latency, zero false alarms in production deployment"
+        },
+        {
+          "area": "Retrieval-Augmented Generation (RAG)",
+          "description": "Building AI systems that answer questions by searching and retrieving relevant documents. Combines vector databases with LLMs for accurate, sourced responses.",
+          "implementation": "Document-based chatbots, intelligent search, context-aware AI agents",
+          "advantage": "More accurate than hallucinating LLMs alone; responses are grounded in actual data"
+        },
+        {
+          "area": "Explainable AI (xAI)",
+          "focus": "Building AI systems where decisions are transparent and interpretable. Clients understand not just what the AI decided, but why.",
+          "importance": "Critical for enterprise/regulated domains where 'black box' AI is unacceptable"
+        },
+        {
+          "area": "Multilingual Speech AI",
+          "technologies": ["Google Text-to-Speech (gtts)", "Whisper (OpenAI speech recognition)", "Multilingual ASR/STT/TTS"],
+          "capability": "Build voice-enabled applications, transcription, multilingual support",
+          "languages": "English, Urdu, and framework support for additional languages"
+        }
+      ]
+    },
+
+    "backendDevelopment": {
+      "primaryFrameworks": [
+        {
+          "name": "FastAPI",
+          "proficiency": "Expert",
+          "usage": "Primary framework for AI-powered backends. Built for async operations, automatic documentation, type safety.",
+          "specialization": "Sub-100ms response times on complex ML inference, concurrent request handling, WebSocket support for real-time updates",
+          "advantage": "Modern Python async framework, perfect for ML model serving and real-time systems"
+        },
+        {
+          "name": "Node.js & Express",
+          "proficiency": "Intermediate-Advanced",
+          "usage": "JavaScript runtime for full-stack development, real-time systems, webhook handling",
+          "applications": "API servers, webhook receivers, integration hubs"
+        }
+      ],
+      "architecturalPatterns": [
+        "REST APIs with proper HTTP semantics",
+        "Async/await patterns for non-blocking operations",
+        "Event-driven architecture (publish-subscribe patterns)",
+        "Microservices communication via queues",
+        "Real-time updates via WebSockets"
+      ],
+      "apiDesign": "RESTful architecture following industry standards, clear versioning, comprehensive error handling, comprehensive documentation"
+    },
+
+    "frontendDevelopment": [
+      {
+        "framework": "React.js",
+        "proficiency": "Advanced",
+        "capabilities": ["Component-based architecture", "State management", "Performance optimization", "Responsive design"],
+        "applications": "Enterprise dashboards, user-facing AI applications, real-time interfaces"
+      },
+      {
+        "framework": "Kotlin/Android",
+        "proficiency": "Intermediate",
+        "specialties": ["Coroutines for async operations", "Notification Manager for push notifications", "Sensor integration", "Camera/media handling"],
+        "application": "Mobile fire detection app with real-time alerts to authorities"
+      },
+      {
+        "framework": "Flutter",
+        "proficiency": "Beginner",
+        "focus": "Cross-platform mobile development when rapid deployment across iOS/Android is priority"
+      }
+    ],
+
+    "cloudInfrastructure": {
+      "awsPrimary": {
+        "lambdaServerless": {
+          "expertise": "Expert",
+          "usage": "Event-driven automation, scheduled pipelines, API endpoints without server management",
+          "patterns": ["S3 triggers", "Scheduled events", "API Gateway integration", "Async processing"],
+          "benefit": "Pay only for execution time, automatic scaling, zero server maintenance"
+        },
+        "databases": {
+          "rdsPostgreSQL": "Production-grade relational database, complex queries, ACID compliance",
+          "s3Storage": "Scalable file storage, media handling, backup systems",
+          "snsMessageBroker": "Publish-subscribe for decoupled communication"
+        },
+        "messagingQueues": {
+          "sns": "Simple Notification Service for immediate alerts",
+          "sqs": "Simple Queue Service for reliable background processing"
+        }
+      },
+      "alternativePlatforms": {
+        "azure": "Intermediate familiarity, deployment capability",
+        "googleCloud": "Intermediate familiarity, BigQuery for analytics"
+      },
+      "containerization": {
+        "docker": "Intermediate proficiency. Container-based deployment for complex applications, local development consistency"
+      }
+    },
+
+    "databasesAndDataManagement": [
+      {
+        "system": "PostgreSQL",
+        "proficiency": "Expert",
+        "specialties": ["Query optimization", "Indexing strategies", "Complex joins", "Full-text search", "JSON/JSONB support"],
+        "achievement": "40% latency reduction through strategic indexing on e-commerce platform"
+      },
+      {
+        "system": "MongoDB",
+        "proficiency": "Intermediate",
+        "usage": "Document-based storage, flexible schemas, rapid development",
+        "applications": "Chat histories, user preferences, semi-structured data"
+      },
+      {
+        "system": "Firebase",
+        "proficiency": "Intermediate",
+        "usage": "Real-time databases, authentication, hosting",
+        "advantage": "Backend-as-a-service for rapid prototyping"
+      }
+    ],
+
+    "automationAndIntegrations": {
+      "noCodeTools": [
+        {
+          "platform": "Make.com",
+          "proficiency": "Expert",
+          "applications": ["WordPress content automation", "Social media posting", "Email workflows", "Data transformation pipelines", "Product upload systems"],
+          "advantage": "Visual workflow design, no coding required for many scenarios, extensive app integrations"
+        },
+        {
+          "platform": "n8n",
+          "proficiency": "Advanced",
+          "type": "Self-hosted automation",
+          "advantage": "Open-source, full data control, self-hosted option for sensitive operations"
+        },
+        {
+          "platform": "Zapier",
+          "proficiency": "Intermediate",
+          "usage": "Quick integrations, IFTTT-style automation, API glue"
+        }
+      ],
+      "apiIntegrations": [
+        {
+          "api": "OpenAI API",
+          "integration": "ChatGPT, GPT-4 for text generation, content creation, analysis",
+          "implemented": "Content automation systems, AI-powered features"
+        },
+        {
+          "api": "Google Gemini API",
+          "integration": "Alternative LLM, multimodal capabilities, image analysis",
+          "use": "Concurrent LLM comparison system"
+        },
+        {
+          "api": "Custom API Development",
+          "capability": "Building APIs that other systems consume, proper authentication, rate limiting, versioning"
+        }
+      ]
+    },
+
+    "developmentTools": {
+      "codeEditors": ["VS Code (primary)", "Cursor (AI-assisted)", "Antigravity"],
+      "versionControl": ["Git", "GitHub", "Collaborative workflows"],
+      "libraries": {
+        "pythonDataScience": ["Pandas (data manipulation)", "NumPy (numerical computing)", "Matplotlib (visualization)"],
+        "pythonML": ["Scikit-Learn (traditional ML)", "PyTorch (deep learning)", "TensorFlow/Keras (deep learning)"]
+      },
+      "deployment": ["Docker fundamentals", "Cloudinary (image management)", "Railway (hosting)", "Vercel (frontend hosting)"]
+    }
+  },
+
+  "languages": {
+    "english": {
+      "proficiency": "Advanced",
+      "level": "Professional",
+      "context": "Primary business language, client communication, documentation"
+    },
+    "urdu": {
+      "proficiency": "Native",
+      "level": "Mother Tongue",
+      "note": "Native speaker capability"
+    },
+    "sindhi": {
+      "proficiency": "Native",
+      "level": "Mother Tongue",
+      "note": "Regional language, childhood fluency"
+    },
+    "multilingualMLCapability": "Training data handling across multiple languages, Urdu-English code-switching in NLP models"
+  },
+
+  "professionalExperience": {
+    "currentRole": {
+      "title": "Full-Stack AI Developer",
+      "actualRole": "Freelance Team Lead",
+      "businessModel": "Freelance Agency",
+      "teamSize": "4 Developers",
+      "platform": "PeoplePerHour",
+      "startDate": "September 2025",
+      "endDate": "Present",
+      "duration": "10 months (ongoing)",
+      "workingArrangement": "Remote",
+      "responsibilities": [
+        "Leading product development from concept through deployment",
+        "Direct client relationship management and stakeholder communication",
+        "Technical architecture and system design decisions",
+        "Building AI-powered automation and intelligent systems",
+        "Developing scalable full-stack applications",
+        "Creating smart integrations between disparate systems",
+        "Code review and quality assurance",
+        "Production deployment and monitoring",
+        "Long-term client support and optimization"
+      ],
+      "measuredOutcomes": {
+        "projectsDelivered": "25 completed projects",
+        "clientSatisfaction": "100% positive feedback",
+        "averageRating": "5.0 out of 5 stars",
+        "onTimeDelivery": "100%",
+        "escalations": "Zero disputes or escalations",
+        "repeatClients": "Multiple clients requesting ongoing/extended work"
+      },
+      "workingStyle": "Agile sprint-based development, weekly client updates, transparent communication, pragmatic problem-solving"
+    }
+  },
+
+  "projectsShowcase": {
+    "majorProjects": [
+      {
+        "id": 1,
+        "name": "SmartLens: AI Threat Detection with Smart Storage",
+        "type": "Intelligent CCTV Surveillance System",
+        "problemStatement": "Retail outlets across vulnerable locations (high fire/looting risk) rely on passive CCTV monitoring. Threats go undetected until significant damage has occurred. Storage infrastructure can't handle 24/7 continuous recording.",
+        "solutionApproach": "AI-powered surveillance system automating threat detection using YOLOv8 object detection. System identifies fire, weapons, suspicious behavior in real-time and triggers instant mobile notifications. Motion-based recording replaces continuous 24/7 storage, reducing overhead by 95%.",
+        "technicalStack": {
+          "aiEngine": ["Python", "YOLOv8 object detection", "OpenCV image processing"],
+          "backend": ["FastAPI"],
+          "frontend": ["Flutter mobile app"],
+          "cloud": ["Firebase for push notifications", "Backblaze B2 for scalable storage"],
+          "database": ["PostgreSQL for incident logging"]
+        },
+        "businessImpact": {
+          "riskReduction": "40% reduction in incident risk through instant detection",
+          "storageOptimization": "95% reduction in storage costs through motion-based recording",
+          "responseTime": "Instant alert to owners and government authorities (<1 second)",
+          "falsePosNegRate": "YOLOv8 detection with near-zero false alarms in production"
+        },
+        "features": [
+          "Real-time threat detection: fire, weapons, suspicious behavior",
+          "Mobile alerts with incident video clip",
+          "Incident reporting for authorities",
+          "Smart storage: only records when motion/threats detected",
+          "Hardware-agnostic: works with standard CCTV feeds"
+        ],
+        "status": "Production - Deployed",
+        "deployment": "Live monitoring in retail outlets",
+        "keyMetric": "Threats detected with <50ms latency, zero false alarms in live deployment"
+      },
+
+      {
+        "id": 2,
+        "name": "Multimodal AI Chatbot: Concurrent LLM Comparison System",
+        "type": "AI Application / Multimodal Interface",
+        "problemStatement": "Users uncertain which LLM produces best output for their needs. Each model has strengths/weaknesses. Choosing wrong model wastes time and money. No easy way to compare real-time outputs side-by-side.",
+        "solutionApproach": "Application running 2+ LLMs concurrently (GPT-3.5, Gemini, Mistral), displaying outputs side-by-side for user comparison. Users select preferred response and system learns preferences. Solves LLM uncertainty through direct comparison rather than guessing.",
+        "technicalStack": {
+          "frontend": ["React.js with real-time update handling"],
+          "backend": ["Node.js", "Python Flask for async processing"],
+          "database": ["MongoDB for conversation history and preferences"],
+          "apis": ["OpenRouter for concurrent LLM access", "Gemini API", "REST endpoints for integration"]
+        },
+        "capabilities": [
+          "Concurrent LLM execution (multiple models run in parallel)",
+          "Text-to-speech output for accessibility",
+          "OCR (Optical Character Recognition) for image input",
+          "Image generation capabilities",
+          "Audio transcription input",
+          "Side-by-side response comparison",
+          "Learning from user preferences"
+        ],
+        "userBenefit": "Users get best response for their specific need by seeing live comparison, not by guessing which model to use",
+        "status": "Production Ready",
+        "use_cases": ["Content creation", "Complex problem-solving", "Decision support", "Model evaluation"]
+      },
+
+      {
+        "id": 3,
+        "name": "E-Commerce Platform: Oxford Sports",
+        "type": "B2B & B2C Wholesale Platform",
+        "client": "Oxford Sports",
+        "projectUrl": "https://www.oxfordsports.online/",
+        "problemStatement": "Startup needed comprehensive e-commerce platform handling both B2B (bulk orders) and B2C (individual customers). Core challenge: autonomous inventory management for 5000+ SKUs, intelligent order processing, efficient bulk product uploads.",
+        "solutionApproach": "Built full-stack e-commerce platform with: advanced inventory management system with rule-based SKU tracking, smart order processing logic, admin dashboard supporting bulk upload via Excel data parsing. System handles thousands of concurrent operations.",
+        "technicalStack": {
+          "frontend": ["React.js for customer and admin interfaces"],
+          "backend": ["Node.js for API and business logic"],
+          "database": ["MongoDB for product catalog and flexible data structure"],
+          "specialCapabilities": ["Excel data parsing", "Intelligent chunking for bulk operations", "Caching for performance"]
+        },
+        "businessCapabilities": [
+          "B2B wholesale support: bulk orders, special pricing, account management",
+          "B2C retail support: shopping cart, payment processing, customer accounts",
+          "Autonomous inventory management with real-time stock tracking",
+          "Rule-based SKU management: dynamic pricing, availability rules, etc.",
+          "Smart order processing: validation, fulfillment routing, tracking",
+          "Admin dashboard with bulk product upload capability"
+        ],
+        "performanceAchievement": "5000+ products uploaded in under 10 seconds (vs manual upload taking days/weeks)",
+        "status": "Completed and Live",
+        "deliveryDate": "2025",
+        "clientSatisfaction": "Platform supporting full business operations"
+      },
+
+      {
+        "id": 4,
+        "name": "AWS Lambda Real Estate Market Intelligence Pipeline",
+        "type": "Cloud Automation & Data Intelligence",
+        "problemStatement": "Real estate professionals need real-time market analysis and instant alerts when market conditions change. Manual market analysis is time-consuming and reactive rather than proactive.",
+        "solutionApproach": "Serverless AWS Lambda pipeline analyzing real estate market data, identifying trends and opportunities, automatically pushing notifications to agents' phones. System runs on schedule, minimal overhead, scales automatically.",
+        "technicalStack": {
+          "cloud": ["AWS Lambda for serverless functions", "EventBridge for scheduling", "SNS for notifications"],
+          "language": ["Python for data analysis"],
+          "dataProcessing": ["Pandas for data transformation", "NumPy for calculations"]
+        },
+        "capabilities": [
+          "Automated daily market analysis",
+          "Real-time trend identification",
+          "Instant alert push to agents",
+          "Historical data tracking for pattern recognition",
+          "Scalable to handle large datasets"
+        ],
+        "businessValue": "Agents receive market opportunities before competitors, enabling competitive advantage",
+        "status": "In Development",
+        "targetClients": "Real estate professionals across Europe"
+      },
+
+      {
+        "id": 5,
+        "name": "Social Media Content Automation",
+        "type": "Marketing Automation & Integration",
+        "problemStatement": "Content creators spending hours manually posting across multiple social platforms (Instagram, Facebook, LinkedIn, Twitter, TikTok). Repetitive manual labor, high error rate, inconsistent scheduling.",
+        "solutionApproach": "Integrated Make.com workflows connected to OpenAI API. Content creators input once, system automatically distributes across 5+ platforms with appropriate formatting for each. Scheduling, hashtags, platform-specific optimization handled automatically.",
+        "technicalStack": {
+          "automation": ["Make.com for workflow orchestration", "OpenAI API for content enhancement"],
+          "platforms": ["Instagram", "Facebook", "LinkedIn", "Twitter", "TikTok"]
+        },
+        "timeAndLaborSavings": "Eliminated manual posting overhead entirely. What took 2-3 hours daily now takes minutes.",
+        "qualityImprovement": "Consistent posting schedule, no missed platforms, optimized content per platform",
+        "status": "Production - Active",
+        "repeatable": "Workflow can be applied to multiple content creators/brands"
+      }
+    ]
+  },
+
+  "freelancePlatforms": {
+    "peoplePerHour": {
+      "platform": "PeoplePerHour",
+      "profileUrl": "https://www.peopleperhour.com/freelancer/technology-programming/yasir_ali-mahar-full-stack-web-mobile-app-zynaxmya",
+      "projectsCompleted": 25,
+      "averageRating": "5.0 out of 5 stars",
+      "clientSatisfactionRate": "100%",
+      "totalEarnings": "Significant portfolio value",
+      "specializations": "Full-stack web development, AI implementation, automation, mobile apps, CRM/ERP",
+
+      "featuredProjects": [
+        {
+          "projectNumber": 1,
+          "projectName": "Website Management",
+          "clientName": "Mark F.",
+          "clientLocation": "Milton Keynes, GB",
+          "projectUrl": "https://www.peopleperhour.com",
+          "date": "June 17, 2026",
+          "rating": 5,
+          "feedback": "Great work, excellent service"
+        },
+        {
+          "projectNumber": 6,
+          "projectName": "Set Up My CRM",
+          "projectUrl": "https://www.peopleperhour.com/freelance-jobs/technology-programming/erp-crm-development/set-up-my-crm-4487468",
+          "clientName": "Henry P.",
+          "clientLocation": "Brentwood, GB",
+          "date": "June 9, 2026",
+          "rating": 5,
+          "feedback": "Yasir is doing a great job so far - after 4 weeks very happy so far."
+        },
+        {
+          "projectNumber": 7,
+          "projectName": "Restaurant & Lounge Platform (Booking System, Admin Dashboard)",
+          "projectUrl": "https://www.peopleperhour.com/freelance-jobs/design/web-design/restaurant-lounge-platform-booking-system-admin-dashboar-4483215",
+          "clientName": "Enos J.",
+          "clientLocation": "Hastings, GB",
+          "date": "June 9, 2026",
+          "rating": 5,
+          "feedback": "Yasir did a great job with my site. I would hire again"
+        },
+        {
+          "projectNumber": 11,
+          "projectName": "Website Development",
+          "clientName": "Tim B.",
+          "clientLocation": "Droitwich, GB",
+          "date": "April 15, 2026",
+          "rating": 5,
+          "feedback": "Brilliant really professional experienced Yasir is good guy has been patient on project as we had set deadlines"
+        },
+        {
+          "projectNumber": 14,
+          "projectName": "Webpage Needed for Mass Excel Product Uploads and Email Ordering",
+          "projectUrl": "https://www.peopleperhour.com/freelance-jobs/design/web-design/webpage-needed-for-mass-excel-product-uploads-and-email-orde-4473556",
+          "clientName": "Jim T.",
+          "clientLocation": "Banbury, GB",
+          "date": "March 11, 2026",
+          "rating": 10,
+          "feedback": "Sometimes words aren't enough - Ali is amazing, we love working with him and he literally never stops - Sometimes we wonder if he even sleeps - 10/10",
+          "followUp": {
+            "date": "March 2, 2026",
+            "feedback": "These guys work day and night to get stuff done for you - I worked with Ali who was extremely reliable and patient and I'm in the process of arranging future work with Yasir and his team. 10/10"
+          }
+        },
+        {
+          "projectNumber": 15,
+          "projectName": "SEO Website Audit",
+          "clientName": "Atif M.",
+          "clientLocation": "Calgary, CA",
+          "date": "May 27, 2026",
+          "rating": 5,
+          "feedback": "Yasir knows his stuff. Amazing work.",
+          "followUp": {
+            "date": "April 24, 2026",
+            "feedback": "Amazing work"
+          }
+        },
+        {
+          "projectNumber": 17,
+          "projectName": "KOMMO CRM Expert – WhatsApp Sales & Pre-Sales Automation",
+          "projectUrl": "https://www.peopleperhour.com/freelance-jobs/marketing-branding-sales/sales-calls/kommo-crm-expert-whatsapp-sales-pre-sales-automation-4468562",
+          "clientName": "Thomas B.",
+          "clientLocation": "Guildford, GB",
+          "date": "March 23, 2026",
+          "rating": 5,
+          "feedback": "Yasir worked hard on a difficult and large project. Helping us set up our KOMMO CRM system and automations. He responded quickly and was understanding when we encountered problems along the way."
+        },
+        {
+          "projectNumber": 20,
+          "projectName": "Make Design Changes to Layout/Typography of Custom CMS",
+          "clientName": "Will C.",
+          "clientLocation": "Westlake Village, CA, US",
+          "date": "April 26, 2026",
+          "rating": 5,
+          "feedback": "Yasir's work has been quite good despite some delays.",
+          "followUp": {
+            "date": "February 8, 2026",
+            "feedback": "Yasir is knowledgeable about custom CMS both front end and back in optimizing our site."
+          }
+        },
+        {
+          "projectNumber": 22,
+          "projectName": "SaaS Website Design – Clean, Modern, Conversion-Focused",
+          "projectUrl": "https://www.peopleperhour.com/freelance-jobs/design/web-design/saas-website-design-clean-modern-conversion-focused-4465350",
+          "clientName": "Dwaine S.",
+          "date": "January 19, 2026",
+          "rating": 5
+        },
+        {
+          "projectNumber": 23,
+          "projectName": "Website Developer (API Integrations, Design & Development)",
+          "projectUrl": "https://www.peopleperhour.com/freelance-jobs/technology-programming/website-development/website-developer-api-integrations-design-development-4464267",
+          "clientName": "Ritchie H.",
+          "date": "January 14, 2026",
+          "rating": 5
+        }
+      ],
+
+      "completedProjectsTimeline": [
+        {
+          "month": "June 2026",
+          "projectCount": 2,
+          "recentProjects": ["Website Management", "Set Up My CRM", "Restaurant & Lounge Platform"]
+        },
+        {
+          "month": "May 2026",
+          "projectCount": 2,
+          "projects": ["SEO Website Audit", "Note Organization App (Follow-up)"]
+        },
+        {
+          "month": "April 2026",
+          "projectCount": 3,
+          "projects": ["Website Development", "Make Design Changes CMS", "App Publishing"]
+        },
+        {
+          "month": "March 2026",
+          "projectCount": 5,
+          "projects": ["Restaurant & Lounge", "Webpage Excel Upload", "KOMMO CRM", "Various other projects"]
+        },
+        {
+          "month": "February 2026",
+          "projectCount": 2,
+          "projects": ["CMS Design Optimization"]
+        },
+        {
+          "month": "January 2026",
+          "projectCount": 3,
+          "projects": ["SaaS Website Design", "Executive Presentation", "Bubble.io Security"]
+        }
+      ]
+    }
+  },
+
+  "pythonSpecializedProjects": {
+    "marketIntelligence": [
+      {
+        "projectName": "Implement Automated Market Alert Notifications",
+        "projectUrl": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/implement-automated-market-alert-notifications-4454667",
+        "clientName": "A B.",
+        "clientLocation": "Amstelveen, Netherlands",
+        "date": "December 7, 2025",
+        "rating": 5,
+        "technologies": ["Python", "Market Intelligence", "Notification Systems"],
+        "description": "Built automated notification system alerting to market changes"
+      },
+      {
+        "projectName": "Integrate Market Intelligence Data into Bubble Dashboards",
+        "projectUrl": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/integrate-market-intelligence-data-into-bubble-dashboards-4454665",
+        "clientName": "A B.",
+        "date": "December 7, 2025",
+        "rating": 5,
+        "technologies": ["Python", "Bubble.io", "Data Integration"],
+        "description": "Connected Python data pipelines to Bubble.io for real-time visualization"
+      },
+      {
+        "projectName": "Python Dev for Dubai Real Estate Market Notifications",
+        "projectUrl": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/python-dev-for-dubai-real-estate-market-notifications-4451886",
+        "clientName": "A B.",
+        "clientLocation": "Amstelveen, NL",
+        "date": "December 7, 2025",
+        "rating": 5,
+        "feedback": "Amazing work and expertise!",
+        "technologies": ["Python", "Real Estate Data", "Market Analysis"],
+        "description": "Real estate market analysis system for Dubai market providing instant intelligence"
+      },
+      {
+        "projectName": "AWS Lambda + Bubble Developer – Monthly Performance Snapshots",
+        "projectUrl": "https://www.peopleperhour.com/freelance-jobs/technology-programming/programming-coding/aws-lambda-bubble-developer-monthly-performance-snapsh-4448487",
+        "clientName": "A B.",
+        "clientLocation": "Amstelveen, NL",
+        "date": "November 29, 2025",
+        "rating": 5,
+        "feedback": "Excellent work! I'm very happy with the work Yasir delivered and his expertise in this field.",
+        "technologies": ["AWS Lambda", "Bubble.io", "Python", "Data Visualization"],
+        "description": "Serverless Python functions generating monthly performance reports and visualizations"
+      }
+    ]
+  },
+
+  "wordpressAndAutomation": [
+    {
+      "projectName": "BBpress WordPress Finish Project",
+      "clientName": "Brian Jacob K.",
+      "date": "November 9, 2025",
+      "rating": 5,
+      "technologies": ["WordPress", "BBpress (forum plugin)", "PHP customization"]
+    },
+    {
+      "projectName": "Fix 3 Scenarios in Make for WordPress Blog Automation",
+      "projectUrl": "https://www.peopleperhour.com/freelance-jobs/artificial-intelligence/artificial-intelligence-integration/fix-3-scenarios-in-make-for-wordpress-blog-automation-4437415",
+      "clientName": "Dan H.",
+      "clientLocation": "City of London, GB",
+      "date": "October 18, 2025",
+      "rating": 5,
+      "feedback": "Great work thank you so much for fixing my automation.",
+      "technologies": ["WordPress", "Make.com (workflow automation)", "API integration"],
+      "description": "Debugged and fixed complex Make.com workflows automating WordPress blog posting"
+    },
+    {
+      "projectName": "Website Migration",
+      "clientName": "Jim F.",
+      "clientLocation": "Bangkok, TH",
+      "date": "October 8, 2025",
+      "rating": 5,
+      "feedback": "Excellent work again from Yasir Ali. Very patient and attentive. We will certainly collaborate again. Highly recommended!",
+      "description": "Full website migration with minimal downtime and data preservation"
+    }
+  ],
+
+  "mobileAppDevelopment": [
+    {
+      "projectName": "Need Help Publishing an App on Google Play",
+      "projectUrl": "https://www.peopleperhour.com/freelance-jobs/technology-programming/mobile-app-development/need-help-publishing-an-app-on-google-play-4433080",
+      "clientName": "Mira K.",
+      "clientLocation": "London, GB",
+      "date": "October 17, 2025",
+      "rating": 5,
+      "feedback": "Excellent",
+      "followUp": {
+        "date": "October 1, 2025",
+        "feedback": "Good job!"
+      },
+      "technologies": ["Google Play Store", "App publishing", "Android optimization"],
+      "description": "Handled full app publication process to Google Play including store optimization and policy compliance"
+    }
+  ],
+
+  "certifications": {
+    "total": 20,
+    "anthropic": [
+      "Claude 101 Certification",
+      "AI Fluency Framework",
+      "AI Fluency Foundations"
+    ],
+    "aiAndMachineLearning": [
+      "Machine Learning Specialization",
+      "Deep Learning Certification",
+      "Computer Vision Specialization",
+      "TensorFlow/PyTorch Advanced Training"
+    ],
+    "cloudAndDevOps": [
+      "AWS Lambda Mastery",
+      "AWS Serverless Architecture",
+      "Cloud Infrastructure Fundamentals"
+    ],
+    "fullStackDevelopment": [
+      "React Advanced Patterns",
+      "Node.js Backend Development",
+      "FastAPI Production Systems",
+      "Database Design & Optimization"
+    ],
+    "professionalDevelopment": [
+      "Agile Project Management",
+      "Team Leadership & Technical Communication",
+      "Technical Writing"
+    ]
+  },
+
+  "engagementModel": {
+    "availability": "Remote (primary), Onsite (Pakistan-based), Hybrid arrangements possible",
+    "engagementTypes": ["Full-time", "Part-time", "Project-based freelance", "Team augmentation", "Advisory/consulting"],
+    "workArrangements": {
+      "remote": "Primary preference, full global capability",
+      "timezone": "PKT (UTC+5), flexible for client schedules",
+      "communication": "Daily standups, weekly detailed updates, transparent communication on blockers and progress",
+      "methodology": "Agile sprint-based, iterative development, continuous feedback"
+    },
+    "idealClients": "High-growth startups seeking to integrate AI meaningfully; enterprises needing reliable, scalable solutions; teams needing technical leadership and architecture guidance",
+    "projectScope": "Prefer substantial projects with clear business impact rather than small tasks; ongoing relationships over one-off work"
+  },
+
+  "contactAndNetworks": {
+    "email": "alirazamemonofficial@gmail.com",
+    "phone": "+923042424358",
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/realalirazamemon/",
+      "activity": "Regular updates on projects and technical insights"
+    },
+    "github": {
+      "url": "http://github.com/alee-razaa",
+      "activity": "Active repository contributions and open-source engagement"
+    },
+    "freelanceProfile": {
+      "platform": "PeoplePerHour",
+      "url": "https://www.peopleperhour.com/freelancer/technology-programming/yasir_ali-mahar-full-stack-web-mobile-app-zynaxmya",
+      "status": "Active, accepting new projects",
+      "rating": "5.0/5 Stars across 25 completed projects"
+    },
+    "preferredCommunicationChannels": ["Email for formal communication", "Video calls for complex discussions", "Slack/chat for daily updates"]
+  }
+}

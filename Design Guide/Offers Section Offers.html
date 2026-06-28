@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Modern Capability Dashboard</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Bricolage Grotesque for cutting-edge tech appeal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc; /* Ultra-clean slate foundation */
+            overflow-x: hidden;
+        }
+        .heading-tech {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            letter-spacing: -0.03em;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="text-slate-900 antialiased">
+
+    <!-- Offers Section Section Canvas -->
+    <section class="relative bg-[#f8fafc] py-28 px-6 lg:px-16 overflow-hidden">
+        
+        <!-- Vibrant Modern Mesh Gradients instead of old dark backlight panels -->
+        <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-indigo-200/40 via-purple-200/30 to-pink-200/20 pointer-events-none rounded-full blur-3xl z-0"></div>
+        <div class="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-200/40 via-blue-200/30 to-emerald-200/20 pointer-events-none rounded-full blur-3xl z-0"></div>
+
+        <div class="w-full max-w-7xl mx-auto relative z-10">
+            
+            <!-- Section Header Controls Row -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
+                <div class="space-y-4 max-w-2xl">
+                    <div class="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                        Ecosystem Capabilities
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight heading-tech">
+                        High-performance offers. <br />Engineered for <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">absolute scale.</span>
+                    </h2>
+                </div>
+                
+                <!-- Modern Minimalist Arrow Navigation Controls -->
+                <div class="flex items-center gap-3 self-start lg:self-end">
+                    <button onclick="handlePrev()" class="w-12 h-12 rounded-2xl border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-md transition-all group">
+                        <svg class="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                    </button>
+                    <button onclick="handleNext()" class="w-12 h-12 rounded-2xl border border-slate-200 bg-white shadow-sm flex items-center justify-center text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-md transition-all group">
+                        <svg class="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sliding Window Carousel Viewport Container -->
+            <div class="w-full overflow-hidden p-2">
+                <div id="carouselTrack" class="flex transition-transform duration-500 ease-in-out gap-8">
+                    <!-- Cards will inject here via JavaScript -->
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- --- IMMERSIVE OVERLAY LIGHT DETAIL MODAL POPUP --- -->
+    <div id="detailModal" onclick="closeOfferModal()" class="fixed inset-0 z-50 bg-slate-950/40 backdrop-blur-xl hidden items-center justify-center p-4 overflow-y-auto">
+        <div onclick="event.stopPropagation()" class="bg-white border border-slate-100 w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl relative grid grid-cols-1 lg:grid-cols-12 max-h-[90vh] lg:max-h-[85vh]">
+            
+            <!-- Modal Left Primary Content Frame (Scrollable) -->
+            <div id="modalLeftContent" class="lg:col-span-7 p-6 md:p-10 overflow-y-auto space-y-8 border-b lg:border-b-0 lg:border-r border-slate-100 custom-scrollbar">
+                <!-- Injected dynamically -->
+            </div>
+
+            <!-- Modal Right Pricing & Add-on Panel -->
+            <div class="lg:col-span-5 p-6 md:p-10 bg-slate-50/50 flex flex-col justify-between overflow-y-auto custom-scrollbar">
+                <div>
+                    <div class="flex justify-between items-center pb-4 border-b border-slate-100 mb-6">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Configure Optional Add-ons</h4>
+                        <button onclick="closeOfferModal()" class="w-8 h-8 bg-slate-100 border border-slate-200 text-slate-500 hover:text-slate-800 rounded-xl flex items-center justify-center text-xs transition">✕</button>
+                    </div>
+
+                    <!-- Dynamic Addon Checkbox Track Container -->
+                    <div id="addonsContainer" class="space-y-3"></div>
+                </div>
+
+                <!-- Live Metrics Summary Board Panel -->
+                <div class="mt-8 pt-6 border-t border-slate-200 space-y-5">
+                    <div id="modalMetricsHeader" class="flex justify-between text-[11px] text-slate-400 font-bold tracking-wide uppercase px-1"></div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-inner flex items-center justify-between">
+                        <div class="flex flex-col">
+                          <span class="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Total Investment</span>
+                          <span id="calculatedPrice" class="text-3xl font-extrabold text-indigo-600 tracking-tight heading-tech">$260</span>
+                        </div>
+                        <div class="text-right flex flex-col">
+                          <span class="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Fulfillment Timeline</span>
+                          <span id="calculatedDays" class="text-xs font-bold text-slate-700 mt-1">4 Days Delivery</span>
+                        </div>
+                    </div>
+
+                    <a id="modalCtaBtn" href="#" target="_blank" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-sm py-4 px-4 rounded-2xl transition-all shadow-lg shadow-indigo-600/20 text-center block tracking-wide">
+                        Order Offer Framework via PeoplePerHour
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- --- JAVASCRIPT CORE AUTOMATION PIPELINE --- -->
+    <script>
+        const DUMMY_IMAGES = [
+            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80"
+        ];
+
+        const OFFERS_DATA = [
+            {
+                id: 1,
+                title: "AI Voice Agent for Calls, Appointment Booking & Sales Automation",
+                tagline: "Enhance Your Business Operations with a Custom AI Voice Agent",
+                shortDesc: "Get premium custom AI Voice Agents that automate appointments, lead qualification, and 24/7 support.",
+                longDesc: "Get premium custom AI Voice Agent that automates appointment scheduling, lead qualification, and customer support for your business, available 24/7. This solution goes beyond standard chatbots by reasoning, planning, and executing tasks tailored to your needs.",
+                price: 260,
+                deliveryDays: 4,
+                views: 23,
+                sales: 0,
+                ctaLink: "https://www.peopleperhour.com/hourlie/ai-voice-agent-for-calls-appoinment-booking-sales-automation/1118141",
+                images: [DUMMY_IMAGES[0], DUMMY_IMAGES[1], DUMMY_IMAGES[2]],
+                deliverables: [
+                    "Custom Voice AI Agent supporting up to three scenarios",
+                    "Workflow automation across multiple platforms",
+                    "Delivery within five to seven days",
+                    "Comprehensive documentation and thirty days of support",
+                    "Unlimited revisions provided during the development phase"
+                ],
+                exclusions: [
+                    "Ongoing management and support beyond 30 days",
+                    "Custom large language model (LLM) fine-tuning",
+                    "White-label or branded dashboard solution alternatives",
+                    "Advanced voice cloning customization options",
+                    "Multi-language support capabilities",
+                    "Additional integrations beyond three systems",
+                    "Analytics dashboard standalone structures"
+                ],
+                requirements: [
+                    "A clear description of your business and main use case",
+                    "Access to your CRM, calendar, or other systems for integration",
+                    "Call flow or appointment booking requirements",
+                    "Any specific voice preferences (if any)",
+                    "List of platforms or tools to integrate"
+                ],
+                workflow: [
+                    "Scoping call to define objectives, technology stack, and use case",
+                    "Development and testing of AI agents",
+                    "Optimization, fine-tuning, and documentation",
+                    "Handoff phase, including training, code transfer, and support"
+                ],
+                addOns: [
+                    { title: "Advanced voice customization (custom voice, accent, tone)", days: 3, price: 250 },
+                    { title: "Integrate additional platforms (beyond 3 included)", days: 2, price: 100 },
+                    { title: "Enable multi-language support (max 2)", days: 2, price: 200 },
+                    { title: "Express delivery: Complete all work in 1 working day", days: -3, price: 200 }
+                ]
+            },
+            {
+                id: 2,
+                title: "Build Full Stack Web App with Lovable, Replit, Claude Cursor",
+                tagline: "Rapid MVP & Application Production Pipeline Frameworks",
+                shortDesc: "Deploy high-performance frontend configurations with Supabase integrations under rapid cycles.",
+                longDesc: "Let's build fast. Let's validate faster. I deliver everything you need across the development, deployment, and maintenance lifecycle using next-generation tools like Lovable, Replit, and Cursor.",
+                price: 260,
+                deliveryDays: 4,
+                views: 26,
+                sales: 0,
+                ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
+                images: [DUMMY_IMAGES[1], DUMMY_IMAGES[2], DUMMY_IMAGES[0]],
+                deliverables: [
+                    "Clean, responsive frontend (Next.js + React + Tailwind CSS)",
+                    "User authentication (Supabase email signup/login ready)",
+                    "Database setup (Supabase / MongoDB Database Matrix)",
+                    "Live deployment on production edge surfaces (Vercel, Netlify)",
+                    "GitHub repo handoff (Code is yours to own property entirely)",
+                    "Complete detailed documentation guides"
+                ],
+                exclusions: [
+                    "Payment gateway live processing structures",
+                    "Advanced custom deep AI neural tool integration",
+                    "Advanced core multi-role Analytics Dashboards",
+                    "Automated heavy email sequence marketing setup",
+                    "Deep semantic SEO and AEO optimizations",
+                    "Deployment setups on your personal unconfigured custom hosting domain"
+                ],
+                requirements: [
+                    "Your core app idea outlined in 1 descriptive paragraph",
+                    "Key list of features and pages required",
+                    "Design references (3 websites you like the most from your domain)",
+                    "Hosting information or domain access details",
+                    "Necessary target API keys and login credentials"
+                ],
+                workflow: [
+                    "Architecture alignment and technology mapping roadmap session",
+                    "Rapid component engineering and database schema wireframing",
+                    "Authentication hooks wiring and API testing cycles",
+                    "Production deployment handoff and administrative system training"
+                ],
+                addOns: [
+                    { title: "One-time payments or subscriptions - Payments Integration", days: 2, price: 200 },
+                    { title: "Deploy to production Custom Domain + Secure SSL", days: 1, price: 100 },
+                    { title: "Analytics dashboard for user tracking, events, revenue with charts", days: 2, price: 150 },
+                    { title: "Optimize for SEO and AI search with meta tags, schema keyword research", days: 2, price: 150 },
+                    { title: "Custom AI chatbot (Claude API or OpenAI) for your website", days: 2, price: 150 },
+                    { title: "WhatsApp Integration Matrix", days: 1, price: 120 },
+                    { title: "Advanced admin dashboard for users, roles, permissions, moderation", days: 3, price: 200 },
+                    { title: "Express delivery: Complete basic application scope in 1 working day", days: -3, price: 400 }
+                ]
+            },
+            {
+                id: 3,
+                title: "Cross-Channel Commerce Hubs (Shopify / TikTok / IG Shops)",
+                tagline: "Sync Inventories & Automate Checkouts Across Social Matrices",
+                shortDesc: "Integrate live cross-channel merchant systems directly with real-time automated order inventory tracking.",
+                longDesc: "Bring your product line to where your audience drops attention. I build centralized inventory synchronization frameworks linking your backend catalogs instantly to TikTok Shops, Instagram Storefronts, and Shopify cores.",
+                price: 340,
+                deliveryDays: 5,
+                views: 45,
+                sales: 1,
+                ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
+                images: [DUMMY_IMAGES[2], DUMMY_IMAGES[0], DUMMY_IMAGES[1]],
+                deliverables: [
+                    "Shopify Store configuration & multi-sales channel activation",
+                    "Live TikTok Shop and Instagram Catalog dynamic sync pairing",
+                    "Automated unified stock management rules engine",
+                    "Pixel tracking deployment for cross-platform analytics"
+                ],
+                exclusions: [
+                    "Paid ad spend budget accounts",
+                    "Product sourcing or manufacturer relations",
+                    "Direct copy creation for thousands of inventory stock units"
+                ],
+                requirements: [
+                    "Active merchant configurations or platform login parameters",
+                    "High-resolution catalog product images and variants lists",
+                    "Corporate tax identifiers where required by platforms"
+                ],
+                workflow: [
+                    "Inventory schema validation",
+                    "API webhook structural synchronization bridging shops",
+                    "Sandbox transactional purchase runs",
+                    "Live asset handoff"
+                ],
+                addOns: [
+                    { title: "Custom abandoned cart automated email sequences", days: 2, price: 90 },
+                    { title: "Advanced upsell application script setups", days: 1, price: 75 }
+                ]
+            },
+            {
+                id: 4,
+                title: "Visibility Dominance Engines (SEO / AEO Optimization)",
+                tagline: "Rank Across Legacy Algorithms and LLM Answer Models",
+                shortDesc: "Optimize brand real estate across next-generation generative answer models and traditional ranking algorithms via highly targeted semantic vector index parameters.",
+                longDesc: "Traditional search is changing. I engineer schema structures and optimize index structures to ensure your service models clear visibility thresholds when queried by generative AI engines and standard crawlers.",
+                price: 290,
+                deliveryDays: 6,
+                views: 19,
+                sales: 0,
+                ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
+                images: [DUMMY_IMAGES[0], DUMMY_IMAGES[2], DUMMY_IMAGES[1]],
+                deliverables: [
+                    "Comprehensive AI search citation audit mapping profiles",
+                    "Semantic JSON-LD structure layout optimization",
+                    "High-intent keyword matrix research for LLM discovery modules",
+                    "Core Web Vitals acceleration performance tuning"
+                ],
+                exclusions: [
+                    "Ongoing continuous monthly backlink building retainers",
+                    "Heavy multi-page legacy content ghostwriting models"
+                ],
+                requirements: [
+                    "Google Search Console access parameters",
+                    "Target list of structural competitors",
+                    "Core platform backend code access authorization"
+                ],
+                workflow: [
+                    "Technical crawler diagnostic analysis",
+                    "Semantic architecture structural rewrite implementation",
+                    "Vector visibility rank tracking indexing baseline configuration",
+                    "Performance sign-off validation"
+                ],
+                addOns: [
+                    { title: "Competitor content gap strategy roadmap formulation", days: 2, price: 120 },
+                    { title: "Automated real-time schema validator tooling integration", days: 1, price: 80 }
+                ]
+            },
+            {
+                id: 5,
+                title: "Programmatic Content Automation Pipelines via n8n / Make",
+                tagline: "Deploy Zero-Touch Omnichannel Asset Production Systems",
+                shortDesc: "Architect programmatic asset generation, deployment scripts, and delivery pipelines powered by Make/n8n. Handle cross-platform publishing cycles completely on autopilot to unlock maximum work efficiency.",
+                longDesc: "Eliminate manual file movements and asset editing overhead. I build automated multi-channel logic blocks using n8n or Make to automatically pull data, stitch visuals, and distribute content on autopilot.",
+                price: 310,
+                deliveryDays: 4,
+                views: 38,
+                sales: 2,
+                ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
+                images: [DUMMY_IMAGES[1], DUMMY_IMAGES[0], DUMMY_IMAGES[2]],
+                deliverables: [
+                    "Custom n8n or Make structural pipeline configuration blueprint",
+                    "Multi-platform API integration connection array maps",
+                    "Dynamic data parsing templates for auto-generation assets",
+                    "Unified failure logging monitoring notification rules"
+                ],
+                exclusions: [
+                    "Platform API paywall premium costs",
+                    "Manual content moderation adjustments"
+                ],
+                requirements: [
+                    "Make or n8n organization access privileges",
+                    "Target asset generation design rules frameworks",
+                    "Media platform publishing account API authorizations"
+                ],
+                workflow: [
+                    "Data routing schematic design mapping",
+                    "Webhook connection payload tests",
+                    "Error handling and exception logic structural integration",
+                    "Handoff training"
+                ],
+                addOns: [
+                    { title: "Advanced secure data collection logging system templates", days: 1, price: 95 },
+                    { title: "Additional 3 cross-channel distribution pipeline configurations", days: 2, price: 140 }
+                ]
+            },
+            {
+                id: 6,
+                title: "Enterprise Database Sync & Real-Time Analytics Boards",
+                tagline: "Consolidate Broken Operational Pipelines Into Single Panels",
+                shortDesc: "Build lightning-fast server dashboards mapping real-time analytical event metrics with charting engine matrices.",
+                longDesc: "Stop guessing your daily throughput or operational health. I build secure analytical monitoring dashboards mapping directly to unified MongoDB or Postgres setups to surface performance data instantly.",
+                price: 450,
+                deliveryDays: 7,
+                views: 52,
+                sales: 4,
+                ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
+                images: [DUMMY_IMAGES[2], DUMMY_IMAGES[1], DUMMY_IMAGES[0]],
+                deliverables: [
+                    "Interactive data dashboard built with Chart.js or Tremor layouts",
+                    "Real-time streaming websocket data connectivity setups",
+                    "High-security encrypted administrative login boundaries",
+                    "Custom PostgreSQL/MongoDB database migration configuration mapping"
+                ],
+                exclusions: [
+                    "Third-party commercial cloud database platform subscription charges",
+                    "Manual multi-year legacy physical paper document data input tracking"
+                ],
+                requirements: [
+                    "Database host server access protocols",
+                    "KPI dictionary layout metrics spreadsheet configuration specs",
+                    "Target server infrastructure console setup parameters"
+                ],
+                workflow: [
+                    "Database schema entity validation layout alignment",
+                    "API data aggregation structural coding development",
+                    "UI chart component binding optimization",
+                    "Security audit deployment verification"
+                ],
+                addOns: [
+                    { title: "Automated Slack / Telegram real-time milestone metrics reporting hooks", days: 1, price: 110 },
+                    { title: "Export tracking module generation engines (CSV/PDF dynamic formatting)", days: 2, price: 130 }
+                ]
+            }
+        ];
+
+        let currentIndex = 0;
+        const visibleCards = 3;
+        const totalOffers = OFFERS_DATA.length;
+        const maxIndex = totalOffers - visibleCards;
+        let activeOffer = null;
+        let activeAddonsList = [];
+        let globalCarouselInterval = null;
+
+        // Render Carousel Layout
+        function renderCarousel() {
+            const track = document.getElementById("carouselTrack");
+            track.innerHTML = "";
+
+            OFFERS_DATA.forEach((offer) => {
+                const card = document.createElement("div");
+                card.className = "w-full md:w-[calc(33.333%-22px)] flex-shrink-0 group bg-white border border-slate-100 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-600/5 overflow-hidden relative";
+                
+                let imagesHtml = `<div class="w-full h-56 relative overflow-hidden bg-slate-100">`;
+                offer.images.forEach((img, imgIdx) => {
+                    imagesHtml += `<img src="${img}" alt="Preview" class="carousel-img-${offer.id} absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${imgIdx === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}">`;
+                });
+                imagesHtml += `<div class="absolute bottom-4 right-4 z-20 flex gap-1.5 bg-white/80 backdrop-blur-md px-2.5 py-1 rounded-full shadow-sm">`;
+                offer.images.forEach((_, imgIdx) => {
+                    imagesHtml += `<div class="dot-${offer.id} w-1.5 h-1.5 rounded-full transition-all duration-300 ${imgIdx === 0 ? 'bg-indigo-600 w-3' : 'bg-slate-300'}"></div>`;
+                });
+                imagesHtml += `</div></div>`;
+
+                card.innerHTML = `
+                    <div>
+                        ${imagesHtml}
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-xl font-bold text-slate-900 tracking-tight mb-3 line-clamp-1 group-hover:text-indigo-600 transition-colors heading-tech">${offer.title}</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed line-clamp-2">${offer.shortDesc}</p>
+                        </div>
+                    </div>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 pt-4 border-t border-slate-50 flex items-center justify-between bg-slate-50/40">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-slate-400 uppercase tracking-wider font-extrabold">Investment</span>
+                            <span class="text-xl font-black text-slate-900 tracking-tight heading-tech">$${offer.price}</span>
+                        </div>
+                        <button onclick="openOfferModal(${offer.id})" class="bg-indigo-600 text-white shadow-sm shadow-indigo-600/10 hover:bg-slate-900 text-xs font-bold px-5 py-3 rounded-xl transition-all">View Structure</button>
+                    </div>
+                `;
+                track.appendChild(card);
+                startCardImageInterval(offer.id, offer.images.length);
+            });
+            updateCarouselPosition();
+        }
+
+        function startCardImageInterval(offerId, totalImgs) {
+            let currentImgIdx = 0;
+            setInterval(() => {
+                currentImgIdx = (currentImgIdx + 1) % totalImgs;
+                const images = document.querySelectorAll(`.carousel-img-${offerId}`);
+                const dots = document.querySelectorAll(`.dot-${offerId}`);
+                
+                images.forEach((img, idx) => {
+                    if (idx === currentImgIdx) {
+                        img.classList.replace('opacity-0', 'opacity-100');
+                        img.classList.replace('z-0', 'z-10');
+                    } else {
+                        img.classList.replace('opacity-100', 'opacity-0');
+                        img.classList.replace('z-10', 'z-0');
+                    }
+                });
+
+                dots.forEach((dot, idx) => {
+                    if (idx === currentImgIdx) {
+                        dot.className = `dot-${offerId} w-3 h-1.5 rounded-full bg-indigo-600 transition-all duration-300`;
+                    } else {
+                        dot.className = `dot-${offerId} w-1.5 h-1.5 rounded-full bg-slate-300 transition-all duration-300`;
+                    }
+                });
+            }, 3000);
+        }
+
+        function updateCarouselPosition() {
+            const track = document.getElementById("carouselTrack");
+            track.style.transform = `translateX(calc(-${currentIndex * (100 / visibleCards)}%))`;
+        }
+
+        function handlePrev() {
+            stopAutoRoll();
+            currentIndex = (currentIndex === 0) ? maxIndex : currentIndex - 1;
+            updateCarouselPosition();
+            startAutoRoll();
+        }
+
+        function handleNext() {
+            stopAutoRoll();
+            currentIndex = (currentIndex >= maxIndex) ? 0 : currentIndex + 1;
+            updateCarouselPosition();
+            startAutoRoll();
+        }
+
+        function startAutoRoll() {
+            if(globalCarouselInterval) clearInterval(globalCarouselInterval);
+            globalCarouselInterval = setInterval(() => {
+                currentIndex = (currentIndex >= maxIndex) ? 0 : currentIndex + 1;
+                updateCarouselPosition();
+            }, 4500);
+        }
+
+        function stopAutoRoll() {
+            if(globalCarouselInterval) clearInterval(globalCarouselInterval);
+        }
+
+        // --- POPUP LIGHT DETAILS MODAL RE-ARCHITECTING ---
+        function openOfferModal(id) {
+            stopAutoRoll();
+            activeOffer = OFFERS_DATA.find(o => o.id === id);
+            activeAddonsList = [];
+            
+            const modal = document.getElementById("detailModal");
+            const leftContent = document.getElementById("modalLeftContent");
+            
+            let deliverablesList = activeOffer.deliverables.map(item => `<li class="flex items-start gap-3"><span class="text-emerald-500 font-bold">✓</span><span class="text-slate-600">${item}</span></li>`).join('');
+            let exclusionsList = activeOffer.exclusions.map(item => `<li class="flex items-start gap-3"><span class="text-slate-300 font-bold">✗</span><span class="text-slate-400">${item}</span></li>`).join('');
+            let workflowGrid = activeOffer.workflow.map((step, idx) => `
+                <div class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex gap-3 items-start shadow-sm">
+                    <span class="text-xs font-black text-indigo-600 bg-indigo-50 px-2 py-1 rounded-lg">0${idx+1}</span>
+                    <span class="text-xs text-slate-700 font-semibold leading-relaxed">${step}</span>
+                </div>
+            `).join('');
+            let requirementsList = activeOffer.requirements.map(req => `<li class="pl-1 text-slate-600 font-medium">${req}</li>`).join('');
+
+            leftContent.innerHTML = `
+                <div>
+                    <div class="inline-block bg-slate-100 text-slate-700 text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-1 rounded-md mb-2">Detailed Scope</div>
+                    <h3 class="text-3xl font-black text-slate-900 tracking-tight heading-tech">${activeOffer.title}</h3>
+                    <p class="text-xs font-bold text-indigo-500 mt-2">"${activeOffer.tagline}"</p>
+                </div>
+                <p class="text-sm text-slate-500 leading-relaxed bg-slate-50 p-5 rounded-2xl border border-slate-100 shadow-inner">${activeOffer.longDesc}</p>
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 flex items-center gap-1.5">✓ Base Handoff Deliverables</h4>
+                    <ul class="space-y-3 text-xs font-medium pl-1">${deliverablesList}</ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-wider text-slate-400 class flex items-center gap-1.5">✗ Strategic Upgrades Available Outside Base</h4>
+                    <ul class="space-y-3 text-xs font-medium pl-1">${exclusionsList}</ul>
+                </div>
+                <div class="space-y-4 pt-2">
+                    <h4 class="text-xs font-black uppercase tracking-wider text-indigo-600">Production Sprint Path</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">${workflowGrid}</div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-wider text-amber-600">Pre-Requisites Required From Buyer</h4>
+                    <ol class="space-y-2 text-xs list-decimal pl-4">${requirementsList}</ol>
+                </div>
+            `;
+
+            renderAddons();
+            updateCalculatedTotals();
+            
+            modal.style.display = "flex";
+        }
+
+        function renderAddons() {
+            const container = document.getElementById("addonsContainer");
+            container.innerHTML = "";
+            
+            activeOffer.addOns.forEach((addon, idx) => {
+                const isChecked = activeAddonsList.includes(idx);
+                const item = document.createElement("div");
+                item.className = `p-4 rounded-2xl border transition-all cursor-pointer flex items-start gap-4 select-none ${isChecked ? 'bg-indigo-500/[0.04] border-indigo-400 text-slate-900 shadow-sm' : 'bg-white border-slate-200/60 text-slate-500 hover:border-slate-300'}`;
+                item.onclick = () => toggleAddon(idx);
+                
+                item.innerHTML = `
+                    <div class="w-5 h-5 rounded-lg mt-0.5 border flex items-center justify-center text-[10px] font-black ${isChecked ? 'bg-indigo-600 border-indigo-600 text-white' : 'border-slate-300 bg-white'}">
+                        ${isChecked ? "✓" : ""}
+                    </div>
+                    <div class="flex-1 overflow-hidden">
+                        <p class="text-xs font-bold text-slate-800 leading-tight">${addon.title}</p>
+                        <p class="text-[10px] text-slate-400 font-medium mt-1">${addon.days === 0 ? "Instant implementation" : addon.days > 0 ? `+${addon.days} business days` : `${addon.days} business days`}</p>
+                    </div>
+                    <span class="text-sm font-extrabold text-indigo-600 heading-tech">+$${addon.price}</span>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function toggleAddon(idx) {
+            if (activeAddonsList.includes(idx)) {
+                activeAddonsList = activeAddonsList.filter(i => i !== idx);
+            } else {
+                activeAddonsList.push(idx);
+            }
+            renderAddons();
+            updateCalculatedTotals();
+        }
+
+        function updateCalculatedTotals() {
+            let finalPrice = activeOffer.price;
+            let finalDays = activeOffer.deliveryDays;
+
+            activeAddonsList.forEach(idx => {
+                finalPrice += activeOffer.addOns[idx].price;
+                finalDays += activeOffer.addOns[idx].days;
+            });
+
+            document.getElementById("calculatedPrice").innerText = `$${finalPrice}`;
+            document.getElementById("calculatedDays").innerText = `${Math.max(1, finalDays)} Days Delivery`;
+            document.getElementById("modalMetricsHeader").innerHTML = `
+                <span>Traffic: ${activeOffer.views} Views</span>
+                <span>Completed: ${activeOffer.sales} Units</span>
+                <span class="text-indigo-600">★★★★★</span>
+            `;
+            document.getElementById("modalCtaBtn").href = activeOffer.ctaLink;
+        }
+
+        function closeOfferModal() {
+            document.getElementById("detailModal").style.display = "none";
+            startAutoRoll();
+        }
+
+        window.onload = () => {
+            renderCarousel();
+            startAutoRoll();
+        };
+    </script>
+</body>
+</html>

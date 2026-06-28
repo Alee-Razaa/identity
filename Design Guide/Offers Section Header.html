@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adapta — Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f8f9fc 0%, #f0f4ff 100%);
+            color: #1a1f2e;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ========== GRADIENT ACCENTS ========== */
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ========== SECTION ========== */
+        .offers-section {
+            position: relative;
+            min-height: 100vh;
+            padding: 5rem 2rem;
+            overflow: hidden;
+        }
+
+        .section-backdrop {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .blob-1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.08) 100%);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            top: -10%;
+            right: 10%;
+            animation: blobMove 8s ease-in-out infinite;
+            filter: blur(40px);
+        }
+
+        .blob-2 {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(34, 197, 94, 0.08) 100%);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            bottom: -5%;
+            left: 5%;
+            animation: blobMove 10s ease-in-out infinite 2s;
+            filter: blur(40px);
+        }
+
+        @keyframes blobMove {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -40px) scale(1.1); }
+        }
+
+        /* ========== HEADER ========== */
+        .section-header {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            margin-bottom: 5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-tagline {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #6366f1;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            color: #1a1f2e;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ========== CAROUSEL CONTAINER ========== */
+        .carousel-wrapper {
+            position: relative;
+            z-index: 10;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            animation: autoScroll 35s linear infinite;
+            will-change: transform;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes autoScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100% - 1.5rem)); }
+        }
+
+        /* ========== OFFER CARD ========== */
+        .offer-card {
+            flex: 0 0 calc(33.333% - 1rem);
+            min-width: 320px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            height: 420px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+        }
+
+        .offer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1 0%, #ec4899 50%, #f59e0b 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 16px 40px rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        .offer-card:hover::before {
+            opacity: 1;
+        }
+
+        /* ========== CARD IMAGE ========== */
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #fef3e2 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 5rem;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.08);
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-image-emoji {
+            font-size: 4rem;
+            z-index: 2;
+        }
+
+        /* ========== CARD CONTENT ========== */
+        .card-content {
+            padding: 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 0.75rem;
+            color: #1a1f2e;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #64748b;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .card-price {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .card-price-amount {
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-price-period {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .card-arrow {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .offer-card:hover .card-arrow {
+            transform: translateX(4px) scale(1.1);
+        }
+
+        /* ========== MODAL OVERLAY ========== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 28px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            padding: 2.5rem 2.5rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .modal-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #fef3e2 100%);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            overflow: hidden;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-header-text h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1a1f2e;
+        }
+
+        .modal-header-text p {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .modal-body {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .modal-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .modal-section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modal-section-content {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #475569;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .feature-check {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .feature-check::after {
+            content: '✓';
+        }
+
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .addon-item {
+            background: linear-gradient(135deg, #f0f4ff 0%, #fef3e2 100%);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .addon-item:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+        }
+
+        .addon-title {
+            font-weight: 600;
+            color: #1a1f2e;
+            margin-bottom: 0.5rem;
+        }
+
+        .addon-price {
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .addon-time {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        .modal-footer {
+            padding: 2.5rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            flex: 1;
+            min-width: 150px;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            flex: 1;
+            min-width: 150px;
+            padding: 1rem 1.5rem;
+            background: #f0f4ff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            color: #1a1f2e;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: #6366f1;
+            background: #fafbff;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background: #f0f4ff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1f2e;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .modal-close:hover {
+            background: #e2e8f0;
+            transform: rotate(90deg);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .offer-card {
+                flex: 0 0 calc(50% - 0.75rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .offers-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .offer-card {
+                flex: 0 0 calc(100% - 0.75rem);
+                height: 380px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .modal-header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .modal-image {
+                width: 100%;
+                height: 150px;
+            }
+
+            .modal-footer {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
+            .modal-header-text h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Scrollbar styling */
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f0f4ff;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Offers Section -->
+    <section class="offers-section">
+        <div class="section-backdrop">
+            <div class="blob-1"></div>
+            <div class="blob-2"></div>
+        </div>
+
+        <div class="section-header">
+            <div class="section-tagline">Services & Solutions</div>
+            <h2 class="section-title">
+                Powerful tools for <span class="gradient-text">your success</span>
+            </h2>
+            <p class="section-subtitle">
+                Explore our comprehensive suite of AI-powered solutions designed to transform how you work
+            </p>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carousel">
+                <!-- Cards will be generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
+    <script>
+        // Offers Data
+        const offersData = [
+            {
+                id: 1,
+                title: "AI Voice Agent",
+                shortDesc: "Automate calls and appointment scheduling 24/7",
+                icon: "🎙️",
+                price: "$260",
+                delivery: "4 days",
+                fullDescription: "Enhance your business operations with a custom AI Voice Agent that automates appointment scheduling, lead qualification, and customer support.",
+                overview: "Get a premium custom AI Voice Agent that automates appointment scheduling, lead qualification, and customer support for your business. This solution goes beyond standard chatbots by reasoning, planning, and executing tasks tailored to your needs.",
+                keyFeatures: [
+                    "Real-time voice agent for inbound and outbound calls",
+                    "Multi-step reasoning and advanced business logic",
+                    "Seamless integration with CRM systems (HubSpot, Salesforce, GoHighLevel)",
+                    "Automated appointment scheduling and lead qualification",
+                    "Human-like and natural voice interactions",
+                    "Robust error handling and system monitoring"
+                ],
+                deliverables: [
+                    "Custom Voice AI Agent supporting up to three scenarios",
+                    "Workflow automation across multiple platforms",
+                    "Delivery within 5-7 days",
+                    "Comprehensive documentation and 30 days support",
+                    "Unlimited revisions during development"
+                ],
+                addons: [
+                    { title: "Voice Customization", price: "+$250", time: "+3 days" },
+                    { title: "Additional Integrations", price: "+$100", time: "+2 days" },
+                    { title: "Multi-Language", price: "+$200", time: "+2 days" },
+                    { title: "Rush Delivery", price: "+$200", time: "-3 days" }
+                ],
+                ctaLink: "#contact"
+            },
+            {
+                id: 2,
+                title: "Full Stack Web App",
+                shortDesc: "Production-ready web apps with modern tech stack",
+                icon: "🚀",
+                price: "$260",
+                delivery: "4 days",
+                fullDescription: "Build scalable, responsive full-stack web applications with clean code, modern frameworks, and production-ready deployment.",
+                overview: "Get a complete full-stack web application built with Next.js, React, and Tailwind CSS. Includes user authentication, database setup, live deployment, and complete documentation.",
+                keyFeatures: [
+                    "Clean, responsive frontend (Next.js + React + Tailwind)",
+                    "User authentication (Supabase email/OAuth)",
+                    "Database setup (Supabase/MongoDB)",
+                    "Live deployment (Vercel/Netlify)",
+                    "GitHub repository included",
+                    "Complete detailed documentation"
+                ],
+                deliverables: [
+                    "Fully functional web application",
+                    "Source code repository on GitHub",
+                    "Deployment to production environment",
+                    "User authentication system",
+                    "Responsive design across devices",
+                    "API integration ready"
+                ],
+                addons: [
+                    { title: "Payment Processing", price: "+$200", time: "+2 days" },
+                    { title: "Custom Domain", price: "+$100", time: "+1 day" },
+                    { title: "Analytics Dashboard", price: "+$150", time: "+2 days" },
+                    { title: "SEO Optimization", price: "+$150", time: "+2 days" },
+                    { title: "AI Chatbot", price: "+$150", time: "+2 days" },
+                    { title: "WhatsApp Integration", price: "+$120", time: "+1 day" }
+                ],
+                ctaLink: "#contact"
+            },
+            {
+                id: 3,
+                title: "AI Chatbot",
+                shortDesc: "Intelligent conversational AI for customer support",
+                icon: "💬",
+                price: "$200",
+                delivery: "3 days",
+                fullDescription: "Create intelligent conversational agents for customer support, lead generation, and user engagement.",
+                overview: "Deploy sophisticated AI chatbots that understand context, provide accurate responses, and seamlessly integrate with your existing systems.",
+                keyFeatures: [
+                    "Claude API or OpenAI GPT integration",
+                    "Context-aware conversations",
+                    "Multi-turn dialogue support",
+                    "Seamless platform integration",
+                    "Custom training data support",
+                    "Real-time monitoring and analytics"
+                ],
+                deliverables: [
+                    "Fully trained custom chatbot",
+                    "API endpoints for integration",
+                    "Admin dashboard for management",
+                    "User analytics and insights",
+                    "30 days technical support",
+                    "Deployment on your platform"
+                ],
+                addons: [
+                    { title: "LLM Fine-tuning", price: "+$300", time: "+3 days" },
+                    { title: "Multi-language", price: "+$200", time: "+2 days" },
+                    { title: "Advanced Analytics", price: "+$150", time: "+1 day" }
+                ],
+                ctaLink: "#contact"
+            },
+            {
+                id: 4,
+                title: "ML Pipeline",
+                shortDesc: "Production-grade ML systems and automation",
+                icon: "⚙️",
+                price: "$400",
+                delivery: "7 days",
+                fullDescription: "Build scalable, production-ready machine learning pipelines with automated data processing and model deployment.",
+                overview: "Design and implement end-to-end ML solutions including data pipelines, model training, inference optimization, and cloud deployment.",
+                keyFeatures: [
+                    "AWS Lambda serverless infrastructure",
+                    "Automated data pipeline orchestration",
+                    "Real-time model inference",
+                    "A/B testing framework",
+                    "Monitoring and alerting",
+                    "Cost optimization"
+                ],
+                deliverables: [
+                    "Complete ML pipeline architecture",
+                    "Automated training & deployment",
+                    "Production inference endpoints",
+                    "Comprehensive monitoring dashboard",
+                    "Performance optimization report",
+                    "60 days ongoing support"
+                ],
+                addons: [
+                    { title: "Custom Model Training", price: "+$500", time: "+5 days" },
+                    { title: "Analytics Dashboard", price: "+$250", time: "+3 days" },
+                    { title: "Data Lake Setup", price: "+$300", time: "+4 days" }
+                ],
+                ctaLink: "#contact"
+            },
+            {
+                id: 5,
+                title: "Cloud Infrastructure",
+                shortDesc: "Secure, scalable AWS architecture & deployment",
+                icon: "☁️",
+                price: "$300",
+                delivery: "5 days",
+                fullDescription: "Architect and deploy enterprise-grade cloud infrastructure with security, scalability, and cost optimization.",
+                overview: "Get production-ready AWS infrastructure with proper VPC setup, auto-scaling, CDN distribution, and security hardening.",
+                keyFeatures: [
+                    "VPC and network architecture",
+                    "Auto-scaling configurations",
+                    "Load balancing setup",
+                    "Database optimization",
+                    "Security hardening",
+                    "CI/CD pipeline setup"
+                ],
+                deliverables: [
+                    "Fully configured AWS infrastructure",
+                    "Security compliance documentation",
+                    "Performance optimization guide",
+                    "Cost analysis and optimization",
+                    "Disaster recovery plan",
+                    "90 days support included"
+                ],
+                addons: [
+                    { title: "Advanced Security", price: "+$250", time: "+2 days" },
+                    { title: "Multi-region Deployment", price: "+$400", time: "+3 days" },
+                    { title: "Migration Services", price: "+$350", time: "+4 days" }
+                ],
+                ctaLink: "#contact"
+            }
+        ];
+
+        // Initialize Carousel
+        function initCarousel() {
+            const carousel = document.getElementById('carousel');
+            
+            // Create cards
+            let cardsHTML = '';
+            offersData.forEach(offer => {
+                cardsHTML += `
+                    <div class="offer-card" data-offer-id="${offer.id}">
+                        <div class="card-image">
+                            <div class="card-image-emoji">${offer.icon}</div>
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <h3 class="card-title">${offer.title}</h3>
+                                <p class="card-description">${offer.shortDesc}</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-price">
+                                    <div class="card-price-amount">${offer.price}</div>
+                                    <div class="card-price-period">${offer.delivery}</div>
+                                </div>
+                                <div class="card-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            carousel.innerHTML = cardsHTML + cardsHTML; // Duplicate for seamless loop
+
+            // Add click listeners
+            document.querySelectorAll('.offer-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const offerId = parseInt(card.dataset.offerId);
+                    openModal(offerId);
+                });
+            });
+        }
+
+        // Open Modal
+        function openModal(offerId) {
+            const offer = offersData.find(o => o.id === offerId);
+            if (!offer) return;
+
+            const modalContent = document.getElementById('modalContent');
+            
+            let addonsHTML = '';
+            if (offer.addons && offer.addons.length > 0) {
+                addonsHTML = `
+                    <div class="modal-section">
+                        <div class="modal-section-title">Optional Add-ons</div>
+                        <div class="addons-grid">
+                            ${offer.addons.map(addon => `
+                                <div class="addon-item">
+                                    <div class="addon-title">${addon.title}</div>
+                                    <div class="addon-price">${addon.price}</div>
+                                    <div class="addon-time">${addon.time}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            modalContent.innerHTML = `
+                <div class="modal-header">
+                    <div class="modal-image">
+                        ${offer.icon}
+                    </div>
+                    <div class="modal-header-text">
+                        <h2>${offer.title}</h2>
+                        <p>${offer.fullDescription}</p>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="modal-section">
+                        <div class="modal-section-title">Overview</div>
+                        <div class="modal-section-content">${offer.overview}</div>
+                    </div>
+
+                    <div class="modal-section">
+                        <div class="modal-section-title">Key Features</div>
+                        <ul class="feature-list">
+                            ${offer.keyFeatures.map(feature => `
+                                <li class="feature-item">
+                                    <div class="feature-check"></div>
+                                    <span>${feature}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="modal-section">
+                        <div class="modal-section-title">Deliverables</div>
+                        <ul class="feature-list">
+                            ${offer.deliverables.map(item => `
+                                <li class="feature-item">
+                                    <div class="feature-check"></div>
+                                    <span>${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    ${addonsHTML}
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn-primary" onclick="window.location.href='${offer.ctaLink}'">
+                        Get Started Now
+                    </button>
+                    <button class="btn-secondary" onclick="closeModal()">
+                        Close
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('modalOverlay').classList.add('active');
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+        }
+
+        // Close on outside click
+        document.getElementById('modalOverlay').addEventListener('click', (e) => {
+            if (e.target.id === 'modalOverlay') {
+                closeModal();
+            }
+        });
+
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+
+        // Initialize
+        initCarousel();
+    </script>
+</body>
+</html>

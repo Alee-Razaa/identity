@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Core Platform Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #ffffff;
+            position: relative;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        /* High-visibility multi-color tech grid background layer */
+        .tech-grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image: 
+                linear-gradient(to right, rgba(6, 182, 212, 0.5) 1px, transparent 1px),     /* Cyan */
+                linear-gradient(to bottom, rgba(236, 72, 153, 0.5) 1px, transparent 1px),   /* Pink */
+                linear-gradient(to right, rgba(245, 158, 11, 0.4) 2px, transparent 2px),    /* Amber */
+                linear-gradient(to bottom, rgba(168, 85, 247, 0.4) 2px, transparent 2px),  /* Purple */
+                linear-gradient(to right, rgba(16, 185, 129, 0.3) 1px, transparent 1px),   /* Emerald */
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.3) 1px, transparent 1px),   /* Blue */
+                linear-gradient(to right, rgba(244, 63, 94, 0.25) 2px, transparent 2px),    /* Rose */
+                linear-gradient(to bottom, rgba(99, 102, 241, 0.25) 2px, transparent 2px);  /* Indigo */
+            background-size: 40px 40px;
+            background-repeat: repeat;
+
+            /* Dynamic Mask Animation setup moving from bottom-left to top-right */
+            animation: gridSweep 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        /* Dynamic moving gradient mask pushing diagonally */
+        @keyframes gridSweep {
+            0% {
+                -webkit-mask-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0) 30%);
+                mask-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0) 30%);
+            }
+            50% {
+                -webkit-mask-image: linear-gradient(45deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 80%);
+                mask-image: linear-gradient(45deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 80%);
+            }
+            100% {
+                -webkit-mask-image: linear-gradient(45deg, rgba(0,0,0,0) 70%, rgba(0,0,0,0.3) 85%, rgba(0,0,0,1) 100%);
+                mask-image: linear-gradient(45deg, rgba(0,0,0,0) 70%, rgba(0,0,0,0.3) 85%, rgba(0,0,0,1) 100%);
+            }
+        }
+
+        .font-tech {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Continuous infinite marquee track animation */
+        .tech-track {
+            display: flex;
+            gap: 6rem;
+            width: max-content;
+            animation: vibrantMarquee 25s linear infinite;
+        }
+        @keyframes vibrantMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="antialiased py-20 px-6 lg:px-16">
+
+    <!-- Directional Dynamic Tech Grid Background Layer -->
+    <div class="tech-grid-overlay"></div>
+
+    <!-- Main Content Layout Container -->
+    <div class="max-w-6xl mx-auto space-y-24 relative z-10">
+
+        <!-- ========================================== -->
+        <!-- ---     FULL-COLOR TECH STACK MARQUEE    --- -->
+        <!-- ========================================== -->
+        <div class="w-full border-y border-slate-200 py-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_4px_25px_rgba(0,0,0,0.03)] overflow-hidden mb-12">
+            <div class="tech-track px-4">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="Python" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="React" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="FastAPI" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="Node.js" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="TypeScript" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="Docker" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="PostgreSQL" />
+                
+                <!-- Duplicate array sequence ensuring perfectly seamless loop tracking transitions -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="Python" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="React" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="FastAPI" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="Node.js" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="TypeScript" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="Docker" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="h-10 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer" alt="PostgreSQL" />
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- ---     VIBRANT MATRIX BENEFITS GRID     --- -->
+        <!-- ========================================== -->
+        <section class="space-y-12">
+            <div class="space-y-2 bg-white/70 p-4 rounded-xl backdrop-blur-sm inline-block">
+                <span class="text-xs font-bold tracking-[0.25em] text-indigo-600 uppercase font-tech block">Ecosystem Architecture</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 font-tech">Why Work With Us</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Benefit 1: Cyan -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-cyan-500 hover:shadow-[0_15px_35px_rgba(6,182,212,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-cyan-500 flex items-center justify-center flex-shrink-0 bg-cyan-50/50 text-cyan-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-cyan-500 group-hover:text-white">01</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-cyan-600 font-tech">24/7 Availability Architecture</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">Continuous production monitoring systems ensure that development nodes and automated operational frameworks maintain maximum network availability continuously.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Deep Pink -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-pink-500 hover:shadow-[0_15px_35px_rgba(236,72,153,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-pink-500 flex items-center justify-center flex-shrink-0 bg-pink-50/50 text-pink-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-pink-500 group-hover:text-white">02</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-pink-600 font-tech">Lifecycle Support Pipeline</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">Dedicated engineering resources provide continuous expert consultation structural support protocols before, during, and after deployment completion.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Vivid Amber -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-amber-500 hover:shadow-[0_15px_35px_rgba(245,158,11,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-amber-500 flex items-center justify-center flex-shrink-0 bg-amber-50/50 text-amber-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-amber-500 group-hover:text-white">03</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-amber-600 font-tech">Technical Guide Handover</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">Every delivered service structure package includes exhaustive API maps, execution schematics, and runtime documentation logs for easy maintainability.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4: Purple -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-purple-500 hover:shadow-[0_15px_35px_rgba(168,85,247,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-purple-500 flex items-center justify-center flex-shrink-0 bg-purple-50/50 text-purple-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-purple-500 group-hover:text-white">04</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-purple-600 font-tech">Autonomous Failover Controls</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">Integrated fallback mechanisms self-heal data transport blockages instantly inside n8n pipelines, protecting database integrity configurations.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 5: Emerald Green -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500 hover:shadow-[0_15px_35px_rgba(16,185,129,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-emerald-500 flex items-center justify-center flex-shrink-0 bg-emerald-50/50 text-emerald-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-emerald-500 group-hover:text-white">05</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-emerald-600 font-tech">Vetted Expert Engineering Pool</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">Deploy specialized developers matching explicit software requirements across complex technical environments and frameworks safely.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 6: Royal Blue -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-blue-400 hover:shadow-[0_15px_35px_rgba(59,130,246,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-blue-500 flex items-center justify-center flex-shrink-0 bg-blue-50/50 text-blue-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-blue-500 group-hover:text-white">06</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-blue-600 font-tech">Milestone Protection Escrow</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">Ensure deployment financial efficiency through multi-tier progress evaluations linked directly to verifiable staging server deliverables.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 7: Coral Red -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-rose-500 hover:shadow-[0_15px_35px_rgba(244,63,94,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-rose-500 flex items-center justify-center flex-shrink-0 bg-rose-50/50 text-rose-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-rose-500 group-hover:text-white">07</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-rose-600 font-tech">Sub-Millisecond SKU Syncing</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">E-commerce management pipelines handle massive database modification volumes instantly with cross-platform synchronization protocols.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 8: Electric Indigo -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-indigo-500 hover:shadow-[0_15px_35px_rgba(99,102,241,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-indigo-500 flex items-center justify-center flex-shrink-0 bg-indigo-50/50 text-indigo-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-indigo-500 group-hover:text-white">08</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-indigo-600 font-tech">Responsible AI Optimization</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">Automation and vision models are configured cleanly for clean enterprise resource allocation and reliable operational efficiency metrics.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 9: Bright Teal -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-teal-500 hover:shadow-[0_15px_35px_rgba(20,184,166,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-teal-500 flex items-center justify-center flex-shrink-0 bg-teal-50/50 text-teal-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-teal-500 group-hover:text-white">09</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-teal-600 font-tech">Real-Time Computer Vision</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">High-accuracy YOLOv8 threat analysis configurations deploy onto hardware nodes with lower execution latency parameters.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 10: Bright Orange -->
+                <div class="bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative overflow-hidden flex items-start gap-5 backdrop-blur-sm transition-all duration-300 hover:border-orange-500 hover:shadow-[0_15px_35px_rgba(249,115,22,0.15)] hover:-translate-y-1 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-dotted border-orange-500 flex items-center justify-center flex-shrink-0 bg-orange-50/50 text-orange-600 font-tech font-bold text-xs transition-colors duration-300 group-hover:bg-orange-500 group-hover:text-white">10</div>
+                    <div class="space-y-1.5 relative z-10">
+                        <h3 class="text-base font-bold tracking-tight text-orange-600 font-tech">Seamless API Adaptability</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">Microservice backends built on modular patterns enable fast functional scalability updates down the development pipeline roadmap.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- ---     PREMIUM SUBSCRIBE SECTION      --- -->
+        <!-- ========================================== -->
+        <section class="max-w-4xl mx-auto py-4">
+            <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-10 shadow-[0_20px_40px_rgba(15,23,42,0.15)] relative overflow-hidden group">
+                <!-- Geometric background logic lines -->
+                <div class="absolute inset-0 opacity-10 pointer-events-none bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+                
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="space-y-2 max-w-md text-center md:text-left">
+                        <span class="text-[10px] font-bold tracking-[0.3em] text-cyan-400 uppercase font-tech block">Stay Synced</span>
+                        <h3 class="text-xl md:text-2xl font-bold tracking-tight font-tech">Let us connect with you</h3>
+                        <p class="text-xs text-slate-400 font-light">Get immediate updates regarding framework expansions, architecture insights, and automation releases.</p>
+                    </div>
+
+                    <!-- Minimalist single email input action layout -->
+                    <form id="subscribeForm" onsubmit="handleSubscribeSubmit(event)" class="w-full md:w-auto flex-1 max-w-md">
+                        <div class="flex flex-col sm:flex-row gap-3 bg-white/5 p-2 rounded-2xl border border-white/10 focus-within:border-cyan-500/50 transition-all duration-300">
+                            <input type="email" required placeholder="Enter network email address" 
+                                class="w-full bg-transparent text-white text-sm px-4 py-3 outline-none font-light placeholder:text-slate-500">
+                            <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-tech font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl transition-all duration-200 shrink-0 whitespace-nowrap">
+                                Subscribe
+                            </button>
+                        </div>
+                        <div id="subscribeStatus" class="text-[10px] font-tech text-slate-400 mt-2 pl-2 hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- ---  PREMIUM ARCHITECTURE CTA FORM     --- -->
+        <!-- ========================================== -->
+        <section class="max-w-4xl mx-auto py-4">
+            <!-- Header Block -->
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs font-bold tracking-[0.3em] text-indigo-600 uppercase font-tech block">Initialization Portal</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 font-tech">Let's Build Something Exceptional</h2>
+                <p class="text-sm text-slate-500 max-w-md mx-auto font-light">Initialize sync, request enterprise-grade workflows, or establish architecture consultation protocols instantly.</p>
+            </div>
+
+            <!-- Main Form Card Container -->
+            <div class="bg-white/95 border-2 border-slate-100 rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] backdrop-blur-md transition-all duration-500 hover:border-indigo-500/30 hover:shadow-[0_30px_60px_rgba(99,102,241,0.08)] relative overflow-hidden group">
+                
+                <!-- Geometric Corner Accent -->
+                <div class="absolute bottom-0 right-0 w-32 h-32 border-b-4 border-r-4 border-dashed border-indigo-500/10 rounded-br-3xl pointer-events-none"></div>
+
+                <form id="premiumContactForm" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    
+                    <!-- Row 1: Full Name & Network Email Field -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Name Input -->
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold tracking-wider text-slate-700 uppercase font-tech block">Ident / Full Name <span class="text-rose-500">*</span></label>
+                            <input type="text" required name="name" placeholder="e.g. Alex Mercer" 
+                                class="w-full bg-slate-50/50 border-2 border-slate-100 text-slate-900 text-sm rounded-xl px-4 py-3.5 outline-none font-light tracking-wide transition-all duration-300 focus:bg-white focus:border-cyan-500 focus:shadow-[0_0_0_4px_rgba(6,182,212,0.1)] placeholder:text-slate-400">
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold tracking-wider text-slate-700 uppercase font-tech block">Network Address / Email <span class="text-rose-500">*</span></label>
+                            <input type="email" required name="email" placeholder="name@enterprise.com" 
+                                class="w-full bg-slate-50/50 border-2 border-slate-100 text-slate-900 text-sm rounded-xl px-4 py-3.5 outline-none font-light tracking-wide transition-all duration-300 focus:bg-white focus:border-pink-500 focus:shadow-[0_0_0_4px_rgba(236,72,153,0.1)] placeholder:text-slate-400">
+                        </div>
+                    </div>
+
+                    <!-- Row 2: WhatsApp Number (Optional) & Service Selection -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- WhatsApp Input (Explicitly Optional) -->
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <label class="text-xs font-bold tracking-wider text-slate-700 uppercase font-tech block">WhatsApp Comms</label>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-tech">Optional</span>
+                            </div>
+                            <input type="tel" name="whatsapp" placeholder="+1 (555) 000-0000 (Optional)" 
+                                class="w-full bg-slate-50/50 border-2 border-slate-100 text-slate-900 text-sm rounded-xl px-4 py-3.5 outline-none font-light tracking-wide transition-all duration-300 focus:bg-white focus:border-emerald-500 focus:shadow-[0_0_0_4px_rgba(16,185,129,0.1)] placeholder:text-slate-400">
+                        </div>
+
+                        <!-- Core Service Requirement Dynamic Selection Dropdown -->
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold tracking-wider text-slate-700 uppercase font-tech block">Required Core Service <span class="text-rose-500">*</span></label>
+                            <div class="relative">
+                                <select required name="service" class="w-full bg-slate-50/50 border-2 border-slate-100 text-slate-900 text-sm rounded-xl px-4 py-3.5 outline-none font-medium tracking-wide transition-all duration-300 focus:bg-white focus:border-amber-500 focus:shadow-[0_0_0_4px_rgba(245,158,11,0.1)] appearance-none cursor-pointer">
+                                    <option value="" disabled selected>Select Architecture Layer...</option>
+                                    <option value="ai-automation">AI Automation Workflows & Pipelines (n8n / Make.com)</option>
+                                    <option value="fullstack">Full-Stack AI Engineering & Custom Software</option>
+                                    <option value="computer-vision">Intelligent Surveillance & Vision AI (YOLOv8)</option>
+                                    <option value="b2b-ecommerce">Wholesale Platforms & High-Speed Inventory Sync</option>
+                                    <option value="market-intelligence">Market Intelligence & Lead Gen Automation</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Project Message (Explicitly Optional) -->
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <label class="text-xs font-bold tracking-wider text-slate-700 uppercase font-tech block">Project Payload Specs / Requirements</label>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-tech">Optional</span>
+                        </div>
+                        <textarea name="message" rows="4" placeholder="Outline your data structures, operational constraints, or target milestones if ready... (Optional)" 
+                            class="w-full bg-slate-50/50 border-2 border-slate-100 text-slate-900 text-sm rounded-xl px-4 py-3.5 outline-none font-light tracking-wide transition-all duration-300 focus:bg-white focus:border-purple-500 focus:shadow-[0_0_0_4px_rgba(168,85,247,0.1)] placeholder:text-slate-400 resize-none"></textarea>
+                    </div>
+
+                    <!-- Footer Row: Automated Telemetry Status & Execution Action -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <!-- Status Readout Tracker -->
+                        <div id="formStatus" class="text-xs font-tech font-semibold tracking-wide text-slate-400 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            System Standing: Operational
+                        </div>
+
+                        <!-- Action Submit Button -->
+                        <button type="submit" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-950 text-white font-tech font-bold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_10px_25px_rgba(15,23,42,0.15)] active:scale-[0.98] flex items-center justify-center gap-2 group/btn">
+                            Execute Connection
+                            <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- ---        MINIMAL JAVASCRIPT LAYER      --- -->
+    <!-- ========================================== -->
+    <script>
+        // Newsletter Subscription Mock Functionality
+        function handleSubscribeSubmit(event) {
+            event.preventDefault();
+            const input = event.target.querySelector('input');
+            const status = document.getElementById('subscribeStatus');
+            const button = event.target.querySelector('button');
+            
+            button.disabled = true;
+            button.innerText = "Syncing...";
+            
+            setTimeout(() => {
+                status.innerText = "✓ System registered. Welcome to the loop.";
+                status.className = "text-[11px] font-tech text-cyan-400 mt-2 pl-2 block";
+                input.value = "";
+                button.disabled = false;
+                button.innerText = "Subscribe";
+                
+                setTimeout(() => { status.style.display = 'none'; }, 4000);
+            }, 1000);
+        }
+
+        // Core Form Handler Functional Routine
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const statusReadout = document.getElementById('formStatus');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            statusReadout.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-spin"></span> Syncing Operational Target...`;
+            
+            setTimeout(() => {
+                statusReadout.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> System Link Established Successfully.`;
+                statusReadout.classList.remove('text-slate-400');
+                statusReadout.classList.add('text-emerald-600');
+                
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                
+                setTimeout(() => {
+                    statusReadout.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> System Standing: Operational`;
+                    statusReadout.classList.remove('text-emerald-600');
+                    statusReadout.classList.add('text-slate-400');
+                }, 5000);
+                
+            }, 1200);
+        }
+    </script>
+</body>
+</html>

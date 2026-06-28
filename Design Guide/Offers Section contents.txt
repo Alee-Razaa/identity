@@ -1,0 +1,217 @@
+Note: Offers Images are in images/Offer Images folder check this out and use for these offers
+When Adding Offers make sure to create 5 rolling offers that I provide including (AI Voice Agent for Calls, Appoinment Booking & Sales Automation and Build full stack web app with Lovable, Replit, Claude Cursor ) Make a sliding window that show 3 images of each offers flipping after 3 seconds and Only 3 offers show on main page while other 2 roll around. Meaning a horizantol auto rolling window that contatin 5 cards of offers each card with Images, and description short describing the title and truncated explaination of that offer. 
+
+when Clicked offer it opens the complete offer page as a popup window explaining everything about it and on click outside anywhere popup should be removed. With call to action button.
+
+
+Content 
+"AI Voice Agent for Calls, Appoinment Booking & Sales Automation
+
+
+0
+
+What you deliver with this Offer
+Enhance Your Business Operations with a Custom AI Voice Agent for Automated Appointment Scheduling.
+
+Get premium custom AI Voice Agent that automates appointment scheduling, lead qualification, and customer support for your business, available 24/7. This solution goes beyond standard chatbots by reasoning, planning, and executing tasks tailored to your needs.
+
+Key Features
+- Real-time voice agent for inbound and outbound calls
+- Multi-step reasoning and advanced business logic
+- Seamless integration with CRM systems (such as HubSpot, Salesforce, GoHighLevel), calendars, email, databases, and APIs
+- Automated appointment scheduling, lead qualification, and sales call management
+- Human-like and natural voice interactions
+- Robust error handling, system monitoring, and fallback logic
+
+
+
+Deliverables
+✓ Custom Voice AI Agent supporting up to three scenarios
+✓ Workflow automation across multiple platforms
+✓ Delivery within five to seven days
+✓ Comprehensive documentation and thirty days of support
+✓ Unlimited revisions provided during the development phase
+
+Optional Add-Ons
+
+✗ Ongoing management and support
+✗ Custom large language model (LLM) fine-tuning
+✗ White-label or branded solutions
+✗ Advanced voice customization options
+✗ Multi-language support capabilities
+✗ Additional integrations beyond three systems
+✗ Analytics dashboard solutions
+
+
+
+Advantages of Collaborating with Me
+✓ Over five years of experience developing production-grade artificial intelligence solutions
+✓ Efficient and transparent delivery process
+✓ Scalable and validated solutions
+✓ Weekly updates on project progress
+
+
+Project Workflow
+1. Scoping call to define objectives, technology stack, and use case
+2. Development and testing of AI agents
+3. Optimization, fine-tuning, and documentation
+4. Handoff phase, including training, code transfer, and support
+
+If you are ready to automate appointment scheduling and strengthen your business’s competitive edge, please contact me to get started.
+
+Get more with Offer Add-ons
+I can develop advanced voice customization (e.g., custom voice, accent, tone)
+Additional 3 working days
+
++$250
+I can integrate additional platforms (beyond 3 included)
+Additional 2 working days
+
++$100
+I can enable multi-language support (max 2)
+Additional 2 working days
+
++$200
+I can deliver all work in 1 working day
++$200
+What do you need from the Buyer to get started?
+1. A clear description of your business and main use case
+2. Access to your CRM, calendar, or other systems for integration
+3. Call flow or appointment booking requirements
+4. Any specific voice preferences (if any)
+5. List of platforms or tools to integrate
+6. Branding guidelines (if white-labeling or customization is requested)
+7. Preferred language(s) for the voice agent
+
+$260
+Delivery in
+4 days
+Views 23 Sales 0
+0
+Control Panel
+Earnings$0
+Items Sold0
+Unread Messages0
+View Workstream
+Pause
+Edit
+Delete
+
+
+
+Call to action Link: https://www.peopleperhour.com/hourlie/ai-voice-agent-for-calls-appoinment-booking-sales-automation/1118141"
+
+
+"Build full stack web app with Lovable, Replit, Claude Cursor
+
+
+0
+
+What you deliver with this Offer
+Thanks for reaching out! Quick clarification:
+
+1. What's your idea? (1-2 sentences)
+2. What's the main user action? (Bunsiess Website? Chat website? E-commerce Website?)
+3. Any must-haves? (Payments integration? SEO and AEO? AI Chatbot?)
+
+Based on your answers, I'll recommend:
+→ Exact features (base + which add-ons)
+→ Timeline
+→ Total investment
+
+You'll get a full proposal before we start.
+I deliver everything you need in development, deployment and maintainence lifecycel.
+
+About My Offer:
+
+WHAT YOU GET:
+✓ Clean, responsive frontend (Next.js + React + Tailwind)
+✓ User authentication ( Supabase email signup/login ready)
+✓ Database setup ( Supabase / MongoDB)
+✓ Live deployment (on Vercel, Netlify)
+✓ GitHub repo (code is yours to own property)
+✓ Complete detailed documentation
+
+
+WHAT'S NOT IN BASIC OFFER WE SHALL CONSIDER ADDITIONAL FEATURES:
+✗ Payment processing
+✗ AI integration
+✗ Advanced analytics Dashboard
+✗ Email automation
+✗ SEO and AEO optimization
+✗ Deployment on your custom domain and hosting support
+
+WHAT I NEED FROM YOU OR WE CAN SORT THIS IN QUICK MEETING:
+→ Your idea (1 paragraph description)
+→ Key feature (List of Features / Pages)
+→ Design reference (3 Websites you like the most from same domain)
+→ Your domain (Your hosting information)
+→ API keys required
+→ Login Informations
+→ Email
+→ Logos etc
+
+Let's build fast. Let's validate faster.
+Get more with Offer Add-ons
+I can one-time payments or subscriptions - Payments Integration
+Additional 2 working days
+
++$200
+I can deploy to production Custom Domain + Secure SSL
+Additional 1 working day
+
++$100
+I can analytics dashboard for user tracking, events, revenue with charts
+Additional 2 working days
+
++$150
+I can optimize for SEO and AI search with meta tags, schema keyword research
+Additional 2 working days
+
++$150
+I can custom AI chatbot (Claude API or OpenAI) for your website
+Additional 2 working days
+
++$150
+I can whatsapp Integration
+Additional 1 working day
+
++$120
+I can advanced admin dashboard for users, roles, permissions, moderation
+Additional 3 working days
+
++$200
+I can deliver all work in 1 working day
++$400
+What do you need from the Buyer to get started?
+REQUIRED FROM YOU:
+1. Brief description of your idea (1-2 paragraphs)
+2. Main feature/use case (what do users actually DO?)
+3. Design preference (modern minimal? colorful? I'll suggest)
+4. Domain name (if you have one, or we set up subdomain)
+5. Login Access
+
+NICE TO HAVE:
+- Figma design mockup
+- Competitor examples (sites you like)
+- Specific color preferences
+- Custom fonts
+
+$260
+Delivery in
+4 days
+Views 26 Sales 0
+0
+Control Panel
+Earnings$0
+Items Sold0
+Unread Messages0
+Pause
+Edit
+Delete
+
+Call to action: https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473 "
+
+
+Create 6 different offers use that data for now I will change it later my self. 
+

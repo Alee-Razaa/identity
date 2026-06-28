@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adapta — Platform Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #281647;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-tech {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Master WebGL Canvas Layer Positioning */
+        #webgl-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Pure Image Match Heading Text Gradients */
+        .gradient-text-pink {
+            background: linear-gradient(135deg, #c084fc 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-text-orange {
+            background: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Smooth Carousel Auto-Scroll Animation Configurations */
+        .scroll-track {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+            animation: scrollMarquee 28s linear infinite;
+        }
+        .scroll-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="text-slate-200 antialiased relative">
+
+    <canvas id="webgl-canvas"></canvas>
+
+    <div class="relative z-10 w-full min-h-screen flex flex-col justify-between">
+
+        <header class="w-full pt-32 pb-20 px-6 lg:px-16 text-center max-w-5xl mx-auto space-y-6">
+            <div class="text-[13px] font-semibold uppercase tracking-[0.15em] text-indigo-400 font-tech">
+                Services & Solutions
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 font-tech leading-[1.1] block">
+                <span class="text-white block mb-2">Powerful tools for <span class="gradient-text-pink">your</span></span>
+                <span class="gradient-text-orange block">success</span>
+            </h1>
+            
+            <p class="text-base md:text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed pt-2">
+                Explore our comprehensive suite of AI-powered solutions designed to transform how you work
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                <a href="#explore-services" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-500 hover:to-pink-500 text-white font-semibold text-sm rounded-xl transition-all shadow-lg shadow-indigo-600/20 tracking-wide text-center">
+                    Explore Ecosystem
+                </a>
+                <a href="#footer-contact" class="w-full sm:w-auto px-8 py-3.5 bg-white/10 hover:bg-white/15 text-white border border-white/10 font-semibold text-sm rounded-xl transition-all tracking-wide text-center backdrop-blur-md">
+                    Hire Engineering Team
+                </a>
+            </div>
+        </header>
+
+        <section id="explore-services" class="w-full py-12 px-6 lg:px-16 max-w-7xl mx-auto space-y-8">
+            <div class="border-b border-white/10 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-tech">Active Engineers Pool</h2>
+                    <p class="text-sm text-slate-400 mt-1">Available for targeted project deployment</p>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-medium text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Roster Verified Live
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-md hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-300 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full overflow-hidden bg-slate-800 border-2 border-cyan-400/40 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Ali Raza M." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Ali Raza M.</h3>
+                                <span class="text-[9px] bg-cyan-500/20 text-cyan-300 font-bold px-1.5 py-0.5 rounded">Lead</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-0.5">Full-Stack AI Expert</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 text-[10px] text-slate-300">
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">Python</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">n8n</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">React</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">FastAPI</span>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-md hover:border-pink-500/50 hover:bg-white/10 transition-all duration-300 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full overflow-hidden bg-slate-800 border-2 border-pink-400/40 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Sana R." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-white group-hover:text-pink-300 transition-colors">Sana R.</h3>
+                                <span class="text-[9px] bg-pink-500/20 text-pink-300 font-bold px-1.5 py-0.5 rounded">Senior</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-0.5">Media Automation</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 text-[10px] text-slate-300">
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">CapCut</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">Make.com</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">Canva AI</span>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-md hover:border-indigo-500/50 hover:bg-white/10 transition-all duration-300 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full overflow-hidden bg-slate-800 border-2 border-indigo-400/40 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Zainab K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors">Zainab K.</h3>
+                                <span class="text-[9px] bg-indigo-500/20 text-indigo-300 font-bold px-1.5 py-0.5 rounded">Mid</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-0.5">Backend Engineer</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 text-[10px] text-slate-300">
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">Node.js</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">Express</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-md hover:border-amber-500/50 hover:bg-white/10 transition-all duration-300 group">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full overflow-hidden bg-slate-800 border-2 border-amber-400/40 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="M. Taha" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">M. Taha</h3>
+                                <span class="text-[9px] bg-amber-500/20 text-amber-300 font-bold px-1.5 py-0.5 rounded">Expert</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-0.5">Computer Vision</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 text-[10px] text-slate-300">
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">YOLOv8</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">OpenCV</span>
+                        <span class="bg-white/5 px-2 py-0.5 rounded border border-white/5">PyTorch</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-12 overflow-hidden max-w-7xl mx-auto space-y-6">
+            <div class="px-6 lg:px-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-pink-400 font-tech">Client Testimonials</h2>
+                <div class="w-12 h-[2px] bg-pink-500 mt-1"></div>
+            </div>
+
+            <div class="w-full overflow-hidden py-4">
+                <div class="scroll-track px-6">
+                    <div class="w-[360px] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md flex flex-col justify-between space-y-4 flex-shrink-0">
+                        <p class="text-xs text-slate-300 leading-relaxed italic">
+                            "The automated pipeline transformed our content operations. We scaled our posting volume by 400% without adding headcount."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-slate-700 font-bold text-xs flex items-center justify-center text-white">UK</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">E-Commerce Brand Manager</h4>
+                                <p class="text-[10px] text-slate-500">PeoplePerHour Client</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[360px] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md flex flex-col justify-between space-y-4 flex-shrink-0">
+                        <p class="text-xs text-slate-300 leading-relaxed italic">
+                            "Exceptional execution on our real-time inventory management module. SKUs synchronize accurately down to the millisecond."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-slate-700 font-bold text-xs flex items-center justify-center text-white">US</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Oxford Sports Logistics</h4>
+                                <p class="text-[10px] text-slate-500">Enterprise Founder</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[360px] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md flex flex-col justify-between space-y-4 flex-shrink-0">
+                        <p class="text-xs text-slate-300 leading-relaxed italic">
+                            "The FastAPI integration coupled with n8n workflow systems solved months of structural synchronization issues for our team."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-slate-700 font-bold text-xs flex items-center justify-center text-white">EU</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Operations Director</h4>
+                                <p class="text-[10px] text-slate-500">SaaS Automation Partner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[360px] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md flex flex-col justify-between space-y-4 flex-shrink-0">
+                        <p class="text-xs text-slate-300 leading-relaxed italic">
+                            "The automated pipeline transformed our content operations. We scaled our posting volume by 400% without adding headcount."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-slate-700 font-bold text-xs flex items-center justify-center text-white">UK</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">E-Commerce Brand Manager</h4>
+                                <p class="text-[10px] text-slate-500">PeoplePerHour Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer-contact" class="w-full bg-[#1b0d33]/80 backdrop-blur-lg border-t border-white/10 pt-16 pb-10 px-6 lg:px-16 mt-12">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                
+                <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-tech">Services</h4>
+                        <ul class="space-y-2.5 text-xs text-slate-400 font-medium">
+                            <li><a href="#voice-agents" class="hover:text-white transition-colors">AI Voice Agents</a></li>
+                            <li><a href="#full-stack" class="hover:text-white transition-colors">Full-Stack Apps</a></li>
+                            <li><a href="#workflows" class="hover:text-white transition-colors">n8n Automation</a></li>
+                            <li><a href="#vision" class="hover:text-white transition-colors">Computer Vision</a></li>
+                            <li><a href="#commerce" class="hover:text-white transition-colors">E-Commerce Setup</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-tech">Developers</h4>
+                        <ul class="space-y-2.5 text-xs text-slate-400 font-medium">
+                            <li><a href="#hire-lead" class="hover:text-white transition-colors">Hire Lead Engineers</a></li>
+                            <li><a href="#hire-backend" class="hover:text-white transition-colors">Backend Architects</a></li>
+                            <li><a href="#hire-automation" class="hover:text-white transition-colors">Automation Leads</a></li>
+                            <li><a href="#roster" class="hover:text-white transition-colors">Active Talent Roster</a></li>
+                            <li><a href="#rates" class="hover:text-white transition-colors">Hiring Rate Cards</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-tech">Pages</h4>
+                        <ul class="space-y-2.5 text-xs text-slate-400 font-medium">
+                            <li><a href="#about" class="hover:text-white transition-colors">Platform Overview</a></li>
+                            <li><a href="#case-studies" class="hover:text-white transition-colors">Case Portfolio</a></li>
+                            <li><a href="#solutions" class="hover:text-white transition-colors">Enterprise Compute</a></li>
+                            <li><a href="#docs" class="hover:text-white transition-colors">API System Docs</a></li>
+                            <li><a href="#legal" class="hover:text-white transition-colors">Terms of Compute</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 lg:pl-12 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t lg:border-t-0 lg:border-l border-white/10 pt-8 lg:pt-0">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 rounded bg-gradient-to-tr from-cyan-500 to-pink-500"></div>
+                            <span class="text-sm font-bold tracking-wider text-white font-tech uppercase">Adapta Labs</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Providing high-end automated architectures, next-gen stack solutions, and enterprise engineering resources.
+                        </p>
+                        <div class="flex gap-3 text-xs pt-1">
+                            <a href="#github" class="text-slate-400 hover:text-white">GitHub</a>
+                            <span class="text-slate-600">•</span>
+                            <a href="#linkedin" class="text-slate-400 hover:text-white">LinkedIn</a>
+                            <span class="text-slate-600">•</span>
+                            <a href="#instagram" class="text-slate-400 hover:text-white">Instagram</a>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-xs">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-pink-400 font-tech">Contacts</h4>
+                        <div class="space-y-3 text-slate-400">
+                            <p class="leading-relaxed">
+                                <strong class="text-white block mb-0.5 font-medium">Location:</strong>
+                                Sukkur IBA University Area,<br />Sukkur, Sindh, Pakistan
+                            </p>
+                            <p>
+                                <strong class="text-white block mb-0.5 font-medium">Contact & Support:</strong>
+                                <a href="mailto:ops@oxfordsports.online" class="text-cyan-400 hover:underline">ops@oxfordsports.online</a>
+                            </p>
+                            <p>
+                                <strong class="text-white block mb-0.5 font-medium">System SLA:</strong>
+                                24/7 Response Desk Operational
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="max-w-7xl mx-auto border-t border-white/5 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-500 font-medium">
+                <p>&copy; 2026 Adapta Labs Ecosystem. All rights reserved.</p>
+                <p class="flex gap-4">
+                    <a href="#privacy" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#sla" class="hover:text-slate-400">SLA Commitments</a>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const canvas = document.getElementById('webgl-canvas');
+        const scene = new THREE.Scene();
+        const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+        
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        const vertexShader = `
+          void main() {
+            gl_Position = vec4(position, 1.0);
+          }
+        `;
+
+        const fragmentShader = `
+          uniform vec2 u_resolution;
+          uniform float u_time;
+
+          float rand(vec2 n) { 
+            return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
+          }
+
+          float noise(vec2 p){
+            vec2 ip = floor(p);
+            vec2 fp = fract(p);
+            fp = fp*fp*(3.0-2.0*fp);
+            return mix(mix(rand(ip), rand(ip+vec2(1.0,0.0)), fp.x), mix(rand(ip+vec2(0.0,1.0)), rand(ip+vec2(1.0,1.0)), fp.x), fp.y);
+          }
+
+          float fbm(vec2 p) {
+            float v = 0.0;
+            float a = 0.5;
+            mat2 rot = mat2(0.8, 0.6, -0.6, 0.8);
+            for (int i = 0; i < 5; ++i) {
+              v += a * noise(p);
+              p = rot * p * 2.15;
+              a *= 0.52;
+            }
+            return v;
+          }
+
+          void main() {
+            vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+            
+            vec3 topSky       = vec3(0.843, 0.914, 0.988); 
+            vec3 midSky       = vec3(0.447, 0.604, 0.871); 
+            vec3 deepNavy     = vec3(0.227, 0.361, 0.675); 
+            vec3 deepPurple   = vec3(0.156, 0.086, 0.278); 
+            vec3 mulberryPink = vec3(0.855, 0.486, 0.701); 
+
+            vec3 skyBackground = mix(deepPurple, deepNavy, smoothstep(0.0, 0.35, uv.y));
+            skyBackground = mix(skyBackground, midSky, smoothstep(0.35, 0.75, uv.y));
+            skyBackground = mix(skyBackground, topSky, smoothstep(0.75, 1.0, uv.y));
+
+            vec2 skyGrid1 = uv * vec2(2.0, 1.4) + vec2(u_time * 0.05, u_time * 0.005);
+            vec2 skyGrid2 = uv * vec2(3.5, 2.2) - vec2(u_time * 0.08, 0.0);
+
+            float fbmLayer1 = fbm(skyGrid1 + vec2(fbm(skyGrid1 * 0.8)));
+            float fbmLayer2 = fbm(skyGrid2 - vec2(fbm(skyGrid2 * 1.2)));
+
+            float textureMix1 = smoothstep(0.3, 0.75, fbmLayer1);
+            float textureMix2 = smoothstep(0.35, 0.8, fbmLayer2);
+
+            vec3 cloudColor1 = mix(deepNavy, mulberryPink, smoothstep(0.3, 0.9, fbmLayer1 + (uv.y * 0.2)));
+            vec3 cloudColor2 = mix(midSky, topSky, fbmLayer2);
+
+            vec3 finalOutput = mix(skyBackground, cloudColor1, textureMix1 * 0.45);
+            finalOutput = mix(finalOutput, cloudColor2, textureMix2 * 0.35);
+
+            float centerGlow = smoothstep(0.7, 0.4, uv.y) * smoothstep(0.1, 0.4, uv.y);
+            finalOutput += mulberryPink * centerGlow * 0.08;
+
+            gl_FragColor = vec4(finalOutput, 1.0);
+          }
+        `;
+
+        const uniforms = {
+          u_time: { value: 0.0 },
+          u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
+        };
+
+        const geometry = new THREE.PlaneGeometry(2, 2);
+        const material = new THREE.ShaderMaterial({
+          vertexShader: vertexShader,
+          fragmentShader: fragmentShader,
+          uniforms: uniforms
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        const clock = new THREE.Clock();
+
+        function animate() {
+          requestAnimationFrame(animate);
+          uniforms.u_time.value = clock.getElapsedTime();
+          renderer.render(scene, camera);
+        }
+
+        window.addEventListener('resize', () => {
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+</body>
+</html>
