@@ -46,7 +46,6 @@ node_modules/
 /.pnp
 .pnp.js
 yarn.lock
-package-lock.json
 
 # Testing
 /coverage
@@ -117,3 +116,8 @@ temp/
 # Local development
 .env.*.local
 .cache/
+# design-check output
+.design/check-*/
+.design/lighthouse.json
+.design/server.log
+.design/check-shots/
