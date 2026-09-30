@@ -121,3 +121,5 @@ temp/
 .design/lighthouse.json
 .design/server.log
 .design/check-shots/
+
+.vercel

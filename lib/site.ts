@@ -1,6 +1,4 @@
-// Canonical site URL. Set NEXT_PUBLIC_SITE_URL in Vercel once a custom domain is attached.
+// Canonical site URL. Override with NEXT_PUBLIC_SITE_URL if a custom domain is attached.
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : 'http://localhost:3000')
+  (process.env.NODE_ENV === 'production' ? 'https://alirazamemon.vercel.app' : 'http://localhost:3000')

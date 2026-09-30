@@ -33,4 +33,4 @@ npm run check
 
 ## Deploy
 
-Hosted on Vercel. After attaching a custom domain, set `NEXT_PUBLIC_SITE_URL` to it so the canonical URL, sitemap and social card point to the right place.
+Hosted on Vercel. Live at https://alirazamemon.vercel.app. After attaching a custom domain, set `NEXT_PUBLIC_SITE_URL` to it so the canonical URL, sitemap and social card point to the right place.
