@@ -1,23 +1,22 @@
-import Image from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import Tilt from '@/components/Tilt'
 import CopyEmail from '@/components/CopyEmail'
 import {
   profile,
-  proof,
-  about,
-  smartLens,
   cryptoSocial,
-  voiceAgent,
-  chatbot,
-  leadWorkspace,
+  smartLens,
   jobRadar,
-  moreRepos,
+  archive,
+  earlyProjects,
+  about,
   experience,
   education,
   skills,
   featuredCerts,
   otherCerts,
   type ProjectLink,
+  type Block,
+  type ArchiveItem,
 } from '@/lib/data'
 import road from '@/assets/road.jpg'
 import portrait from '@/assets/portrait.jpg'
@@ -25,10 +24,21 @@ import slDashboard from '@/assets/smartlens-dashboard.jpg'
 import slAlerts from '@/assets/smartlens-alerts.jpg'
 import slClips from '@/assets/smartlens-clips.jpg'
 import cryptoShot from '@/assets/cryptosocial.jpg'
-import leadShot from '@/assets/lead-workspace.jpg'
+import cryptoApi from '@/assets/cryptosocial-api.jpg'
 import radarShot from '@/assets/job-radar.jpg'
+import moviehub from '@/assets/moviehub.jpg'
+import urlSaver from '@/assets/url-saver.jpg'
+import localChat from '@/assets/local-chatbot.jpg'
+import ageGender from '@/assets/age-gender.jpg'
 
 const mailto = `mailto:${profile.email}`
+
+const archiveImages: Record<NonNullable<ArchiveItem['image']>, StaticImageData> = {
+  moviehub,
+  urlSaver,
+  localChat,
+  ageGender,
+}
 
 function Arrow() {
   return (
@@ -81,6 +91,29 @@ function Flow({ steps }: { steps: string[] }) {
   )
 }
 
+function Blocks({ blocks }: { blocks: Block[] }) {
+  return (
+    <>
+      {blocks.map((b) => (
+        <div className="block" key={b.heading}>
+          <h4>{b.heading}</h4>
+          {b.text.map((t) => (
+            <p key={t}>{t}</p>
+          ))}
+        </div>
+      ))}
+    </>
+  )
+}
+
+function CvButton({ variant = 'glass' }: { variant?: 'glass' | 'accent' }) {
+  return (
+    <a className={`btn btn--${variant}`} href={profile.cv} download>
+      Download CV
+    </a>
+  )
+}
+
 export default function Home() {
   return (
     <>
@@ -102,10 +135,10 @@ export default function Home() {
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-          <a className="btn btn--accent btn--sm" href={mailto}>
-            Email me
+          <a className="btn btn--accent btn--sm" href={profile.cv} download>
+            Download CV
           </a>
         </nav>
       </header>
@@ -114,19 +147,17 @@ export default function Home() {
         <section className="hero" id="top">
           <div className="wrap hero__grid">
             <div className="hero__copy">
-              <p className="eyebrow">{profile.name}, AI engineer</p>
+              <p className="eyebrow">{profile.name}, applied AI engineer</p>
               <h1>AI agents and automation, built end to end.</h1>
               <p className="hero__sub">
-                Co-founder of XEMTECH: 30+ projects shipped for UK clients in six months. Now looking for an AI
-                specialist role.
+                I build LLM agents and computer vision pipelines, plus the guardrails and tests that keep them
+                reliable. Available for full-time work now.
               </p>
               <div className="hero__cta">
                 <a className="btn btn--accent" href="#work">
                   See my work
                 </a>
-                <a className="btn btn--glass" href={mailto}>
-                  Email me
-                </a>
+                <CvButton />
               </div>
             </div>
 
@@ -150,6 +181,10 @@ export default function Home() {
                     <dd>{profile.location}</dd>
                   </div>
                   <div>
+                    <dt>Availability</dt>
+                    <dd>{profile.availability}</dd>
+                  </div>
+                  <div>
                     <dt>Degree</dt>
                     <dd>BS Computer Science (AI), 2026</dd>
                   </div>
@@ -165,130 +200,140 @@ export default function Home() {
                       GitHub <Arrow />
                     </a>
                   </li>
+                  <li>
+                    <a href={mailto}>Email</a>
+                  </li>
                 </ul>
               </div>
             </Tilt>
           </div>
         </section>
 
-        <section className="wrap" aria-label="At a glance">
-          <dl className="proof glass">
-            {proof.map((p) => (
-              <div key={p.label}>
-                <dt>{p.label}</dt>
-                <dd>{p.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-
         <section className="section wrap" id="work">
           <div className="section__head reveal">
             <h2>Selected work</h2>
-            <p>Six things I have built, from a thesis project to products that are live today. Every one has a link you can open.</p>
+            <p>
+              Three projects in depth. Each one says what I owned, what broke and how I fixed it, and what it still
+              cannot do.
+            </p>
           </div>
 
-          <article className="feature glass reveal">
-            <div className="feature__copy">
-              <p className="kind">{smartLens.kind}</p>
-              <h3>{smartLens.title}</h3>
-              <p className="lead">{smartLens.lead}</p>
-              {smartLens.body.map((t) => (
-                <p key={t}>{t}</p>
-              ))}
-              <dl className="metrics">
-                {smartLens.metrics.map((m) => (
-                  <div key={m.label}>
-                    <dt>{m.label}</dt>
-                    <dd>{m.value}</dd>
-                  </div>
-                ))}
-              </dl>
-              <Stack items={smartLens.stack} />
-              <p className="note">{smartLens.note}</p>
-              <Links links={smartLens.links} name={smartLens.title} />
-            </div>
-            <Tilt className="phones" max={6}>
-              <div className="phone phone--left">
-                <Image src={slAlerts} alt="SmartLens app: alert history listing fire and threat alerts by camera" sizes="(max-width: 900px) 30vw, 190px" />
-              </div>
-              <div className="phone phone--center">
-                <Image src={slDashboard} alt="SmartLens app: dashboard with clip, threat and storage counts" sizes="(max-width: 900px) 34vw, 220px" />
-              </div>
-              <div className="phone phone--right">
-                <Image src={slClips} alt="SmartLens app: saved clips tagged as fire or threat" sizes="(max-width: 900px) 30vw, 190px" />
-              </div>
-            </Tilt>
-          </article>
-
-          <article className="feature feature--flip glass reveal">
-            <div className="feature__copy">
+          <article className="case glass">
+            <div className="case__copy">
               <p className="kind">{cryptoSocial.kind}</p>
               <h3>{cryptoSocial.title}</h3>
               <p className="lead">{cryptoSocial.lead}</p>
-              {cryptoSocial.body.map((t) => (
-                <p key={t}>{t}</p>
-              ))}
+              <Blocks blocks={cryptoSocial.blocks} />
               <Stack items={cryptoSocial.stack} />
               <Links links={cryptoSocial.links} name={cryptoSocial.title} />
             </div>
-            <Tilt className="screen" max={5}>
-              <a href={cryptoSocial.links[0].href} target="_blank" rel="noreferrer" aria-label="Open cryptosocial.media">
-                <Image src={cryptoShot} alt="CryptoSocial Research home page: Analysis you can read. Data your bot can parse." sizes="(max-width: 900px) 92vw, 560px" />
-              </a>
-            </Tilt>
+            <div className="case__media">
+              <Tilt className="screens" max={5}>
+                <a className="screen" href={cryptoSocial.links[0].href} target="_blank" rel="noreferrer" aria-label="Open cryptosocial.media">
+                  <Image src={cryptoShot} alt="CryptoSocial Research home page: Analysis you can read. Data your bot can parse." sizes="(max-width: 900px) 92vw, 520px" />
+                </a>
+                <a className="screen screen--back" href={cryptoSocial.links[2].href} target="_blank" rel="noreferrer" aria-label="Open the CryptoSocial JSON API">
+                  <Image src={cryptoApi} alt="CryptoSocial API section showing a live JSON response from /api/v1/posts" sizes="(max-width: 900px) 92vw, 520px" />
+                </a>
+              </Tilt>
+            </div>
           </article>
 
-          <div className="bento">
-            <article className="cell cell--narrow glass reveal">
-              <Flow steps={voiceAgent.flow} />
-              <p className="kind">{voiceAgent.kind}</p>
-              <h3>{voiceAgent.title}</h3>
-              <p>{voiceAgent.body}</p>
-              <Stack items={voiceAgent.stack} />
-              <Links links={voiceAgent.links} name={voiceAgent.title} />
-            </article>
+          <article className="case case--flip glass">
+            <div className="case__copy">
+              <p className="kind">{smartLens.kind}</p>
+              <h3>{smartLens.title}</h3>
+              <p className="lead">{smartLens.lead}</p>
+              <p className="role">{smartLens.role}</p>
+              <Blocks blocks={smartLens.blocks} />
+              <table className="results">
+                <caption>{smartLens.table.caption}</caption>
+                <thead>
+                  <tr>
+                    {smartLens.table.head.map((h) => (
+                      <th key={h} scope="col">
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {smartLens.table.rows.map(([m, a, b]) => (
+                    <tr key={m}>
+                      <th scope="row">{m}</th>
+                      <td>{a}</td>
+                      <td>{b}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <Stack items={smartLens.stack} />
+              <Links links={smartLens.links} name={smartLens.title} />
+            </div>
+            <div className="case__media">
+              <Tilt className="phones" max={6}>
+                <div className="phone phone--left">
+                  <Image src={slAlerts} alt="SmartLens app: alert history listing fire and threat alerts by camera" sizes="(max-width: 900px) 30vw, 170px" />
+                </div>
+                <div className="phone phone--center">
+                  <Image src={slDashboard} alt="SmartLens app: dashboard with clip, threat and storage counts" sizes="(max-width: 900px) 34vw, 200px" />
+                </div>
+                <div className="phone phone--right">
+                  <Image src={slClips} alt="SmartLens app: saved clips tagged as fire or threat" sizes="(max-width: 900px) 30vw, 170px" />
+                </div>
+              </Tilt>
+            </div>
+          </article>
 
-            <article className="cell cell--wide glass reveal">
-              <div className="cell__media">
-                <Image src={leadShot} alt="Lead Workspace sign-in screen" sizes="(max-width: 900px) 92vw, 640px" />
-              </div>
-              <p className="kind">{leadWorkspace.kind}</p>
-              <h3>{leadWorkspace.title}</h3>
-              <p>{leadWorkspace.body}</p>
-              <Stack items={leadWorkspace.stack} />
-              <Links links={leadWorkspace.links} name={leadWorkspace.title} />
-            </article>
-
-            <article className="cell cell--wide glass reveal">
-              <div className="cell__media">
-                <Image src={radarShot} alt="PPH Job Radar settings: monitoring toggle, check interval and alert window" sizes="(max-width: 900px) 92vw, 640px" />
-              </div>
+          <article className="case glass">
+            <div className="case__copy">
               <p className="kind">{jobRadar.kind}</p>
               <h3>{jobRadar.title}</h3>
-              <p>{jobRadar.body}</p>
+              <p className="lead">{jobRadar.lead}</p>
+              <Blocks blocks={jobRadar.blocks} />
               <Stack items={jobRadar.stack} />
               <Links links={jobRadar.links} name={jobRadar.title} />
-            </article>
+            </div>
+            <div className="case__media">
+              <Tilt className="screens" max={5}>
+                <div className="screen">
+                  <Image src={radarShot} alt="PPH Job Radar settings: monitoring toggle, check interval and alert window" sizes="(max-width: 900px) 92vw, 520px" />
+                </div>
+              </Tilt>
+            </div>
+          </article>
+        </section>
 
-            <article className="cell cell--narrow glass reveal">
-              <Flow steps={chatbot.flow} />
-              <p className="kind">{chatbot.kind}</p>
-              <h3>{chatbot.title}</h3>
-              <p>{chatbot.body}</p>
-              <Stack items={chatbot.stack} />
-              <Links links={chatbot.links} name={chatbot.title} />
-            </article>
+        <section className="section wrap" id="projects">
+          <div className="section__head reveal">
+            <h2>More projects</h2>
+            <p>Client, team and university work, with what I did on each.</p>
           </div>
-
+          <div className="archive">
+            {archive.map((p) => (
+              <article className="card glass reveal" key={p.title}>
+                {p.image ? (
+                  <div className="card__media">
+                    <Image src={archiveImages[p.image]} alt={p.imageAlt ?? ''} sizes="(max-width: 900px) 92vw, 360px" />
+                  </div>
+                ) : p.flow ? (
+                  <Flow steps={p.flow} />
+                ) : null}
+                <p className="kind">{p.kind}</p>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
+                <Links links={p.links} name={p.title} />
+              </article>
+            ))}
+          </div>
           <p className="more reveal">
-            Also on GitHub:{' '}
-            {moreRepos.map((r, i) => (
+            Earlier web projects from 2024:{' '}
+            {earlyProjects.map((r, i) => (
               <span key={r.href}>
                 <a href={r.href} target="_blank" rel="noreferrer">
-                  {r.title}
-                </a>{' '}
-                ({r.note}){i < moreRepos.length - 1 ? ', ' : '.'}
+                  {r.label}
+                </a>
+                {i < earlyProjects.length - 1 ? ', ' : '.'}
               </span>
             ))}
           </p>
@@ -357,13 +402,16 @@ export default function Home() {
         <section className="section wrap" id="skills">
           <div className="section__head reveal">
             <h2>Skills</h2>
-            <p>The tools I have used on real projects. No percentage bars, because those never mean anything.</p>
+            <p>Each skill is listed with the project where you can see it used.</p>
           </div>
           <dl className="skills glass panel reveal">
             {skills.map((s) => (
               <div key={s.group}>
                 <dt>{s.group}</dt>
-                <dd>{s.items.join(', ')}</dd>
+                <dd>
+                  {s.items}
+                  {s.where ? <span className="skills__where">Used in {s.where}</span> : null}
+                </dd>
               </div>
             ))}
           </dl>
@@ -372,7 +420,10 @@ export default function Home() {
         <section className="section wrap" id="certifications">
           <div className="section__head reveal">
             <h2>Certifications</h2>
-            <p>Twenty in total. The three most recent first, and every link opens the issuer&apos;s own record.</p>
+            <p>
+              Courses and skill badges show what I have studied; the projects above show what I can build. Linked
+              items open the issuer&apos;s own record.
+            </p>
           </div>
           <ul className="certs-top reveal">
             {featuredCerts.map((c) => (
@@ -389,39 +440,44 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <div className="glass panel certs reveal">
-            {otherCerts.map((g) => (
-              <div key={g.issuer}>
-                <h3>{g.issuer}</h3>
-                <ul>
-                  {g.items.map((c) => (
-                    <li key={c.name}>
-                      {c.href ? (
-                        <a href={c.href} target="_blank" rel="noreferrer">
-                          {c.name}
-                        </a>
-                      ) : (
-                        <span>{c.name}</span>
-                      )}
-                      <span className="certs__when">{c.when}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <details className="glass panel certs reveal">
+            <summary>All courses and badges</summary>
+            <div className="certs__groups">
+              {otherCerts.map((g) => (
+                <div key={g.group}>
+                  <h3>{g.group}</h3>
+                  <ul>
+                    {g.items.map((c) => (
+                      <li key={c.name}>
+                        {c.href ? (
+                          <a href={c.href} target="_blank" rel="noreferrer">
+                            {c.name}
+                          </a>
+                        ) : (
+                          <span>{c.name}</span>
+                        )}
+                        <span className="certs__when">{c.when}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </details>
         </section>
 
         <section className="section wrap" id="contact">
           <div className="contact glass reveal">
-            <h2>Hiring for an AI role? Let&apos;s talk.</h2>
+            <h2>Hiring for an applied AI role? Let&apos;s talk.</h2>
             <p>
-              Email is the fastest way to reach me: <a href={mailto}>{profile.email}</a>
+              I can start full-time now. Email is the fastest way to reach me:{' '}
+              <a href={mailto}>{profile.email}</a>
             </p>
             <div className="contact__cta">
               <a className="btn btn--accent" href={mailto}>
                 Email me
               </a>
+              <CvButton />
               <CopyEmail email={profile.email} />
               <a className="btn btn--glass" href={profile.linkedin} target="_blank" rel="noreferrer">
                 LinkedIn <Arrow />
@@ -438,7 +494,7 @@ export default function Home() {
         <p>
           {profile.name}, {profile.location}
         </p>
-        <p>Built with Next.js. Last updated September 2026.</p>
+        <p>Built with Next.js. Last updated October 2026.</p>
       </footer>
     </>
   )
